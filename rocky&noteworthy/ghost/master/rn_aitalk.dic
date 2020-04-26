@@ -70,6 +70,8 @@ RandomTalk : nonoverlap
 		"\1\s[10]Could I get some pancakes? Extra syrup?\e"
 		
 		"\1\s[10]Pancake pals...\e"
+		
+		"\1\s[10]Pancakes are good for updates.\e"
 	}
 	elseif friendlylevel >= 70 //neutral
 	{
