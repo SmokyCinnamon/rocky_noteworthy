@@ -1,5 +1,5 @@
-﻿///////// 빒?긕?긚긣긡깛긵깒?긣
-///////// 빒럻쀱깏??긚렖룕
+﻿///////// 빒?긕?긚긣긡깛긵깒?긣 (sentence ghost template)
+///////// 빒럻쀱깏??긚렖룕 (string resource dictionary)
 ///////// written by umeici.
 
 
@@ -26,7 +26,7 @@ On_username
 
 On_homeurl
 {
-	"https://github.com/SmokyCinnamon/rocky_noteworthy/tree/master/rocky%26noteworthy/"
+	"https://raw.githubusercontent.com/SmokyCinnamon/rocky_noteworthy/master/rocky%26noteworthy/"
 }
 
 
