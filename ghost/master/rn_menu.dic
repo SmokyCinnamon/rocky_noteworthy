@@ -784,11 +784,11 @@ Select.bugreport
 	{
 		if friendlylevel >= 20
 		{
-			"\1\s[10]Have bug-type things? \w5Report bugs to youremailaddress@emailprovider.com. \w5We were downloaded from \_a[http://www.whereveryoupostedthem.com/]some place\_a.\e"
+			"\1\s[10]Have bug-type things? \w5Report bugs to youremailaddress@emailprovider.com. \w5We were downloaded from \_a[https://github.com/SmokyCinnamon/rocky_noteworthy]some place\_a.\e"
 		}
 		else
 		{
-			"\1\s[34]...\n\f[italic,true](Report bugs to place. Downloaded from \_a[place]place\_a.)\f[italic,false]%(rendmenu)\e"
+			"\1\s[34]...\n\f[italic,true](Report bugs to place. Downloaded from \_a[https://github.com/SmokyCinnamon/rocky_noteworthy]place\_a.)\f[italic,false]%(rendmenu)\e"
 		}
 	}
 }

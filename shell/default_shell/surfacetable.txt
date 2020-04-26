@@ -12,7 +12,7 @@ scope,0
 4,Upset
 5,Excited
 6,Happy
-7,Angry?
+7,Shutdown
 8,Thinking
 
 group,R

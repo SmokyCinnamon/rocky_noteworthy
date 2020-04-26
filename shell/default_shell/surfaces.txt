@@ -407,13 +407,14 @@ element0,overlay,surface1506.png,0,0
 
 }
 
-//Main Character Angry pose
+//Noteworthy's shutdown pose
 surface7
 {
-//element1,overlay,surface1507.png,0,0
-element0,overlay,surface1401.png,0,0
-element1,overlay,surface0.png,0,0
-element2,overlay,surface1301.png,0,0
+	collision0,96,16,150,38,NHead
+	collision1,101,41,149,81,NFace
+	
+element1,overlay,surface1507.png,0,0
+
 }
 
 //Noteworthy's thinking pose
