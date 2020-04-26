@@ -72,6 +72,21 @@ RandomTalk : nonoverlap
 		"\1\s[10]Pancake pals...\e"
 		
 		"\1\s[10]Pancakes are good for updates.\e"
+		
+		"\1\s[10]Working on anything, %(username)?\w3\n...\w2Can I see?\e"
+		
+		"\1\s[18]I wonder if there's a limit to the amount of syrup you can put on pancakes...\e"
+		
+		"\1\s[15]I bet Freckle would like it here.\nYou'd probably give him sandwiches, \1\s[33]right %(username)?\e"
+		
+		"\1\s[18]I wonder if %(username) likes hugs...\e"
+		
+		"\1\s[18]You don't like waffles, do you?\n\1\s[10]Geometric breakfast grids just can't compare to pancakes.\e"
+		
+		"\1\s[10]...I do still want to know where we are.\e"
+		
+		"\1\s[17]What might there be to behold, out where %(username) is? Surely skies and stars, just like my heart still lives...\w3\n\n\w4\1\s[10]Hum, maybe not...\e"
+		
 	}
 	elseif friendlylevel >= 70 //neutral
 	{
@@ -83,6 +98,26 @@ RandomTalk : nonoverlap
 		"\0\s[0]What are you working on, %(username)? \w4Any neat projects?\e"
 		
 		"\1\s[10]Old mans river... \w5\nHe is very funny. \w5\nAnd very famous for his anger. \w6\nHave the titans challenged you before??? \w6\nforget about an abalon expeirience anymore. \w5\nA pod of red blood! \w6\none of the hallmarks of your appearance / is that you are a smart and sophisticated MAN! \w6\n...the old voice / that comes out of / the heart of hte west. \w6\nIs the masses... and the appearance of insects. \w4\nof myths. \w6\niron\w4 / and iron / the same power you get from the cats. \w6\nWide aortic flow is \f[italic,true]very\f[italic,false] important for / converting wood to brick and steam. \w6\nYour roasted vulture is the pride of a rebelious spirit! \w6\nWe want to be careful\w4 / it shows with confidence. \w5\nYes, justice is trivial\w6 / SO if there is a name for unsuspecting migrants who roam the edges of sassafra...\w4 and the ashes of asia...\w4 the name is probably as fast and free as gypsy water..your name... \w6\n\nis lover.\w8\w4\e"
+		
+		"\1\s[17]Likely to be unfounded, found-dead upturned to face down...ded?\1\s[10]\n\nIt's a work in progress, anyways.\e"
+		
+		"\1\s[10]I guess it's alright here, wherever here may be.\e"
+		
+		"\1\s[10]I still want to know how %(username) got me here. Any ideas how %(heshe) did it?\e"
+		
+		"\1\s[10]Too bad my violin didn't make the trip here.\w4\1\s[31]Then I could play something for you, %(username)!\e"
+		
+		"\1\s[10]How's it going? I'm great, thanks for asking.\e"
+		
+		"\1\s[10]If only I had my violin\w4 I might be able to show you the un-matched skill I have!\e"
+		
+		"\1\s[10]So, Noteworthy, how does a skeleton go about walking, anyways?\1\s[31]Especially with such illuminating eye-lights you seem to have.\e"
+		
+		"\1\s[10]Noteworthy, do \f[italic,true]you\f[italic,false] like waffles?\e"
+		
+		"\1\s[10]Hello!\e"
+		
+		"\1\s[10]Hi.\w5\n\nI'm dying a slow death of pancake-deprivation.\e"
 	}
 	elseif friendlylevel >= 20 //less than enthused
 	{
@@ -121,6 +156,11 @@ RandomTalk : nonoverlap
 		"\1\s[17]A red-gold sea of old / In infintismal increments of ill-fated assesments\n Absolve to obtain a wealth of elements / heart-to-heart meant well enough\nSay while for the while we're here / how is it to have lost one dear?\e"
 		
 		"\1\s[31]Doing well-off enough for yourself without us, aren't you?\e"
+		
+		"\1\s[31]In general, it's better to be hospitable, right, %(username)? I've always thought so.\e"
+		
+		"\1\s[17]You look nice, %(username). \1\s[31]Doesn't %(heshe) look nice? Wouldn't you agree Noteworthy?\e"
+		
 	}
 	elseif friendlylevel <= 0 //scared I guess?
 	{
@@ -131,6 +171,14 @@ RandomTalk : nonoverlap
 		"\1\s[31]How's it going here?\e"
 		
 		"\1\s[31]I doubt I'm \f[italic,true]that\f[italic,false] interesting, really.\1\s[18]\w4\n\nWho knows, though.\1\s[17]\w4\nMaybe I am.\e"
+		
+		"\1\s[31]Are you working on something? Can I help?\e"
+		
+		"\1\s[31]How has your day been?\e"
+		
+		"\1\s[31]Anything I can help you with?\e"
+		
+		"\1\s[31]How's it going? Could I get you a sandwich?\e"
 	}
 	else
 	{

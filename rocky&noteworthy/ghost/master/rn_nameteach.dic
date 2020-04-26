@@ -62,7 +62,7 @@ OnNameTeach
 	}
 	elseif reference0 == "Rocky" || reference0 == "rocky" //like the above, this checks to see if the user put in Triangle OR triangle. Again, this is mostly to avoid confusion in dialogue between the user and the characters.
 	{
-		"\1\s[10]Trying to steal my name, are you?\![open,inputbox,OnNameTeach,-1]"
+		"\1\s[31]Trying to steal my name, are you?\![open,inputbox,OnNameTeach,-1]"
 		//See again that this ends with the same tag to reopen the input box. Again, replace but keep the \![open,inputbox,OnNameTeach,-1] tag at the end.
 	}
 	elseif reference0 == "" || reference0 == " " || reference0 == "   " //This is if the user doesn't put in a name at all, since that'd also get awkward in dialogue. Admittedly if a user REALLY wanted to put a ton of spaces as their name, the OR operators can only go so far, but this situation would mostly come up by accident I'd figure from a user hitting enter too quickly.
@@ -89,10 +89,10 @@ OnNameTeach
 		}*/
 		-- //the titles after this are gender neutral and will appear for all users. If you want to remove the masculine and feminine titles entirely, just delete from the curly bracket one line up to the double dashes above "if presuffix == "masculine". That should leave only the neutral titles. Make sure to leave a set of double dashes above the neutral titles though.
 		"\![*]\q[Mr.,titlemr]\n/
-		\![*]\q[Master,titlemaster]\n"
-		"\![*]\q[Ms.,titlems]\n/
-		\![*]\q[Lady,titlelady]\n"
-		"\![*]\q[-ssi,titlessi]\n/
+		\![*]\q[Master,titlemaster]\n/
+		\![*]\q[Ms.,titlems]\n/
+		\![*]\q[Lady,titlelady]\n/
+		\![*]\q[-ssi,titlessi]\n/
 		\![*]\q[-san,titlesan]\e"
 		//Note that the final line here ends with \e instead of \n/, since it is the final option. If you're copying and pasting to add new options, don't use the final line. More on that in the box below.
 	}

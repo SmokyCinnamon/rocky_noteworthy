@@ -559,10 +559,21 @@ Select.TALKNORMAL
 //If the user chooses every five minutes. This is the default rate the ghost will start up in, as seen in bootend.dic.
 Select.TALKPOOR
 	{
- 		talktime = "5 minutes"
-		aitalkinterval = 400
-		
- 		"\1\s[10]But five minutes is a long time!\e"
+		{
+			if freindlylevel >= 70
+			{
+				talktime = "5 minutes"
+				aitalkinterval = 400
+				
+				"\1\s[10]But five minutes is a long time!\e"
+			}
+			else
+			{
+				talktime = "5 minutes"
+				aitalkinterval = 400
+				"\1\s[31]If you say so.\e"
+			}
+		}
 	}
 
 //If the user chooses to not have them speak. This is one case where you MIGHT want to make talktime equal something else, if you have a snappier way of saying the ghost won't talk. Make sure it flows well in your menus though, since it will be displayed in your config menu.
@@ -702,7 +713,7 @@ OnChoiceTimeout
 OpenKeroMenu
  {
 	 {
-		if friendlylevel >=50
+		if friendlylevel >=70
 			{
 				"\1\s[10]\b[2]"
 	
@@ -716,8 +727,8 @@ OpenKeroMenu
 				\![*]\q[Bug report,bugreport]\n/
 				\![*]\q[Do you like me?,welldoyou]\n/
 				//\![*]\q[Levels,testlevels]\n/
-				//\![*]\q[Item menu,ritems]\n\n/
-				\![*]\q[Test variable,testvariable]\n\n/
+				\![*]\q[Item menu,ritems]\n\n/
+				//\![*]\q[Test variable,testvariable]\n\n/
 				//When you are done with the test variable, aka your ghost is finished or you just don't want it showing up when you publish your ghost beta or whatevs, simply add two // slashes in front of \![*] to comment the line out. In Notepad++, it will turn green. When you want to use it again, erase the two slashes to turn it back to normal.
 				\![*]\q[Nothing,keroCANCEL]\n\n\n/
 				%(friendlylevel)\e"
@@ -734,7 +745,7 @@ OpenKeroMenu
 				\![*]\q[Don't you like me?,welldoyou]\n/
 				\![*]\q[Do you want something?,ritems]\n\n/
 				//\![*]\q[Test variable,testvariable]\n\n/
-				\![*]\q[Nothing,keroCANCEL]\n\n\n/
+				\![*]\q[Done.,keroCANCEL]\n\n\n/
 				%(friendlylevel)\e"
 			}
 			else
@@ -784,11 +795,11 @@ Select.bugreport
 	{
 		if friendlylevel >= 20
 		{
-			"\1\s[10]Have bug-type things? \w5Report bugs to youremailaddress@emailprovider.com. \w5We were downloaded from \_a[https://github.com/SmokyCinnamon/rocky_noteworthy]some place\_a.\e"
+			"\1\s[10]Have bug-type things? \w5Tell them to...\w3 smokycinnamonroll on, uh\w3.. tumblr?\n\w4You and your internet things.\n\n \w5We were downloaded from \_a[https://github.com/SmokyCinnamon/rocky_noteworthy]this internet thing\_a.\e"
 		}
 		else
 		{
-			"\1\s[34]...\n\f[italic,true](Report bugs to place. Downloaded from \_a[https://github.com/SmokyCinnamon/rocky_noteworthy]place\_a.)\f[italic,false]%(rendmenu)\e"
+			"\1\s[34]...\n\f[italic,true](Report bugs to @smokycinnamonroll on tumblr.\nDownloaded from \_a[https://github.com/SmokyCinnamon/rocky_noteworthy]github\_a.)\f[italic,false]%(rendmenu)\e"
 		}
 	}
 }
@@ -804,7 +815,7 @@ Select.welldoyou
 	{
 		"\1\s[15]Well of course I do!%(rendmenu)\e"
 	}
-	elseif friendlylevel >= 50
+	elseif friendlylevel >= 70
 	{
 		"\1\s[32]Huh? What do you mean?%(rendmenu)\e"
 	}
