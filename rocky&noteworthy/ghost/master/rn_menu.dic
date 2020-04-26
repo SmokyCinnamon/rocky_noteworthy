@@ -716,7 +716,7 @@ OpenKeroMenu
 				\![*]\q[Bug report,bugreport]\n/
 				\![*]\q[Do you like me?,welldoyou]\n/
 				//\![*]\q[Levels,testlevels]\n/
-				\![*]\q[Item menu,ritems]\n\n/
+				//\![*]\q[Item menu,ritems]\n\n/
 				\![*]\q[Test variable,testvariable]\n\n/
 				//When you are done with the test variable, aka your ghost is finished or you just don't want it showing up when you publish your ghost beta or whatevs, simply add two // slashes in front of \![*] to comment the line out. In Notepad++, it will turn green. When you want to use it again, erase the two slashes to turn it back to normal.
 				\![*]\q[Nothing,keroCANCEL]\n\n\n/
@@ -733,7 +733,7 @@ OpenKeroMenu
 				\![*]\q[Bug report,bugreport]\n/
 				\![*]\q[Don't you like me?,welldoyou]\n/
 				\![*]\q[Do you want something?,ritems]\n\n/
-				\![*]\q[Test variable,testvariable]\n\n/
+				//\![*]\q[Test variable,testvariable]\n\n/
 				\![*]\q[Nothing,keroCANCEL]\n\n\n/
 				%(friendlylevel)\e"
 			}
@@ -748,7 +748,7 @@ OpenKeroMenu
 				\![*]\q[Bug report,bugreport]\n/
 				\![*]\q[You like me... right?,welldoyou]\n/
 				\![*]\q[Take this.,ritems]\n\n/
-				\![*]\q[Test variable,testvariable]\n\n/
+				//\![*]\q[Test variable,testvariable]\n\n/
 				\![*]\q[I'm done.,keroCANCEL]\n\n\n/
 				%(friendlylevel)\e"
 			}
@@ -877,8 +877,8 @@ Select.keromenu
 
 //It is ALWAYS A GOOD IDEA to test your dialogue! If you won't check it with the test variable, at least test it with Script Input! It'll save you so much trouble!
 
-Select.testvariable
+/*Select.testvariable
 {
 	friendlylevel = -50
 	"\1\s[10]Testing! levels are %(friendlylevel)\e"
-}
+}*/
