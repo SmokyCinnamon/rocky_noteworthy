@@ -180,6 +180,7 @@ Select.familytalk
 Select.stimmybean
 {
 	"\s[8]What about it? \w4\s[9]If you're trying to tell me to stop, \w4that's a hard no.%(nendmenu)\e"
+	"\s[8]What about it? \w4Was I being weird in my explanation? \w4I'm sorry.%(nendmenu)\e"
 }
 Select.stimexpo
 {
@@ -244,6 +245,8 @@ Select.giveplush
 	"\s[0](You give her a fish plushie.)\n\s[6]Thank you!%(itemend)\e"
 	"\s[0](You give them a bird plushie.)\n\s[6]Thanks!%(itemend)\e"
 	"\s[0](You give her a bird plushie.)\n\s[6]Thanks!%(itemend)\e"
+	"\s[0](You give her a dragon plushie.)\n\s[6]Aw, thank you!%(itemend)\e"
+	"\s[0](You give them a dragon plushie.)\n\s[6]Aw, thank you!%(itemend)\e"
 }
 Select.BACKTOMENU
 	{
@@ -400,6 +403,7 @@ OnUserBornMonth
 		else //if the month isn't a valid month, like 32 or something.
 			{
 			"\0\s[0]That's not a valid month. Try again.\![open,inputbox,OnUserBornMonth,-1]\e"
+			"\0\s[9]That month isn't valid, silly. Try again.\![open,inputbox,OnUserBornMonth,-1]\e"
 			
 			//You can replace this dialogue as well up to the \! tag, as mentioned. You need to leave the tag for the input box so they can put in a correct month.
 			}
@@ -501,7 +505,7 @@ OnUserBornDay
 				}
 			else //if the day isn't valid, like the 10046th or something.
 				{
-					"\0\s[0]That's not a valid day. Try again.\![open,inputbox,OnUserBornDay,-1]\e"
+					"\0\s[9]That's not a valid day. Try again.\![open,inputbox,OnUserBornDay,-1]\e"
 					
 					//Similar as you can see to the month check above. You can replace the dialogue here up to the tag as you just did, but make sure to leave the input box tag so the user can put in a correct day.
 				}
@@ -593,7 +597,7 @@ Select.TALKMAX
  		talktime = "30 seconds" //this sets up the envelope properly
 		aitalkinterval = 45 //this changes the actual rate
 		
- 		"\0\s[0]Ah, that's... yeah, ok. We'll speak every 30 seconds, then.\e"
+ 		"\0\s[2]Ah, that's... \w4\s[0]yeah, ok. \w4We'll speak every 30 seconds, then.\e"
 	}
 
 //If the user chooses every minute.
@@ -947,7 +951,7 @@ Select.keromenu
 
 //It is ALWAYS A GOOD IDEA to test your dialogue! If you won't check it with the test variable, at least test it with Script Input! It'll save you so much trouble!
 
-Select.testvariable
+/*Select.testvariable
 {
 	askedstim = 0
 	"\1 asked stim is %(askedstim).\e"

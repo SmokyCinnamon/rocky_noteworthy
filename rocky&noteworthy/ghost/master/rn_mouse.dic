@@ -72,6 +72,7 @@ MouseMoveSakura
 					"\0\s[9]Not right now.\e"
 					"\0\s[9]Could you not?\e"
 					"\0\s[4]Don't touch me.\e"
+					"\0\s[9]I don't want to be touched right now.\e"
 				}
 				elseif friendlylevel <= 0
 				{
@@ -82,6 +83,7 @@ MouseMoveSakura
 				{
 					friendlylevel -=2
 					"\0\s[7]Could you-! \w8\s[9](sigh) could you not?\e"
+					"\0\s[4]I don't want to be touched right now.\e"
 				}
  			}
  			elseif reference4 == "NFace" //Another area set up by the collisions in surfaces.txt. You can expand this list with as many elseifs as you need depending on how many collisions you've set up.
@@ -240,6 +242,7 @@ MouseDoubleClickSakura
 			friendlylevel -=5
 			"\0\s[4]Don't do that.\e"
 			"\0\s[4]Don't touch me.\e"
+			"\0\s[4]Please stop that.\e"
 		}
 		elseif friendlylevel <= 0
 		{
@@ -260,11 +263,14 @@ MouseDoubleClickSakura
 			friendlylevel += 1
 			"\0\s[6]Thank you for the pats.\e"
 			"\0\s[6]You patted me!\e"
+			"\0\s[6]Ehehe, thank you!\e"
 		}
 		elseif friendlylevel >=20
 		{
 			friendlylevel -=1
+			"\0\s[9]Please don't do that right now.\e"
 			"\0\s[9]Don't touch me.\e"
+			"\0\s[9]I don't want to be touched right now.\e"
 		}
 		elseif friendlylevel <= 0
 		{
@@ -273,7 +279,9 @@ MouseDoubleClickSakura
 		}
 		else
 		{
+			friendlylevel -=1
 			"\0\s[4]don't touch me.\e"
+			"\0\s[4]I really don't want to be touched right now.\e"
 		}
  	}
 	else

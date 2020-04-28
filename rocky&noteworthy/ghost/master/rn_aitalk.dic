@@ -57,7 +57,7 @@ RandomTalk : nonoverlap
 		
 		"\1\s[10]Do you wanna be pancake pals?\e"
 		
-		"\1\s[10]So Noteworthy, do you have a cactus friend?\w8\0\s[0]I-\w6\nA \w4\s[8]\f[italic,true]what\f[italic,false]?\w6\1\s[13]\n\n[half]A cactus friend.\e"
+		"\1\s[10]So Noteworthy, do you have a cactus friend?\w8\0\s[2]I-\w6\nA \w4\s[8]\f[italic,true]what\f[italic,false]?\w6\1\s[13]\n\n[half]A cactus friend.\e"
 		
 		"\1\s[15]How are you on this fine pancake-filled day?\e"
 		
@@ -110,10 +110,7 @@ RandomTalk : nonoverlap
 		
 		"\1\s[10]I guess it's alright here, wherever here may be.\e"
 		
-
 		"\1\s[10]I still want to know how %(username) got me here. Any ideas how %(heshe) did it? \w8\0\s[8]A couple theories,\w4 but mostly dumb ones.\w4 I'd have to ask my dad and my uncle.\w8 They might know.\e"
-
-		"\1\s[10]I still want to know how %(username) got me here. Any ideas how %(heshe) did it?\e"
 
 		"\1\s[10]Too bad my violin didn't make the trip here.\w4\1\s[31]Then I could play something for you, %(username)!\e"
 		
@@ -124,10 +121,6 @@ RandomTalk : nonoverlap
 		"\1\s[10]So, Noteworthy, how does a skeleton go about walking, anyways? \1\s[31]Especially with such illuminating eye-lights you seem to have. \w8\0\s[8]Well I'm not actually dead, that's a common misconception. \w4\s[0]I'm just your average monster, \s[6]\f[italic,true]sans\f[italic,false] \w8\s[0]the flesh and other squishy bits. \w6So like whatever-percent more magic to make up for it. \w4The eyelights depend on the skeleton though, honestly. \w4.\w4.\w4.\w6\s[2]OH YEAH \s[6]we also see what you're saying in font! \w4\s[8]Which honestly the fact that other monsters and humans can't is weird to me.\e"
 		
 		"\1\s[10]Noteworthy, do \f[italic,true]you\f[italic,false] like waffles? \0\s[0]I do, yeah. Especially if you put ice cream on 'em, \f[italic,true]yum.\f[italic,false] Why?\w6\1\s[31]No reason.\e"
-
-		"\1\s[10]So, Noteworthy, how does a skeleton go about walking, anyways?\1\s[31]Especially with such illuminating eye-lights you seem to have.\e"
-		
-		"\1\s[10]Noteworthy, do \f[italic,true]you\f[italic,false] like waffles?\e"
 
 		"\1\s[10]Hello!\e"
 		
@@ -229,8 +222,6 @@ RandomTalk : nonoverlap
 		"\1\s[31]Don't you get bored, sometimes?\e"
 		
 		"\1\s[31]Nice seeing you all the time. I take it you like it with us here?\e"
-		
-		"\0\s[7].....\e"
 		
 		"\0\s[7].....\e"
 	}
