@@ -42,7 +42,9 @@ OnFirstBoot
 	talktime = "5 minutes" //How the value aitalkinterval will display in the config menu.
 	deleteshitai = "OFF" //Sets whether or not the user can uninstall the ghost to "OFF". The user can change it later in the config menu (see menu.dic). 
 	nowshell = "default_shell" //This is for a special if check in aitalk.dic to see what shell the ghost is using. You should use the name of your default shell folder here.
-	friendlylevel = 50
+	friendlylevel = 70
+	pluralpro = "false"
+	askedstim = 0
 	
 	if reference0 == 0 //Don't touch this line.
  	{
@@ -74,7 +76,7 @@ OnFirstBoot
  	{
 		//---- This is dialogue for when the user uninstalls the ghost for whatever reason, then reinstalls them again. They will run this dialogue instead of their normal dialogue above. You can change this to reflect the fact the user's uninstalled your ghost once, or you can make it the same as the above, it's up to you. You'll see this if you try to run OnFirstBoot using ![raise].
  		{
- 		"\![enter,passivemode]\0\s[0]\1\s[10]Um...\w3 Hi! Where am I, exactly?\w3 Why are you a skeleton? \w8\0\s[0]...I know skeleton monsters are supposedly rare,\w4\s[8] but am I really that surprising?\w8\1\n\n[half]\s[10]A skeleton \f[italic,true]monster\f[italic,false]?\w4 What in the world is going on here???\w8\0\n\n[half]???\w5 Does Mt. Ebbot not ring any bells?\w3 Am I in an alternate dimension??\w4\n\f[height,6]Again...?\f[height,default]\w8\1\n\n[half]\s[10]Alternate... dimension?\w4 Well, we certainly-\w2 \1\s[31]OH HI THERE WHO ARE YOU?!\x\c\0\s[2]A human? \w4\s[0]Did you bring us here?\w8\1\c\s[31]How would you even do that? Some strange age this must be.\w8\0\n\n[half]\s[8]Indeed. \w4\s[0]Well, since we're here, why don't you tell us your name and pronouns? That way we won't mess up our grammar.\x\w8\1\c\s[10]Hey, what's this about grammar?\n\n[half]/
+ 		"\![enter,passivemode]\0\s[0]\1\s[10]Um...\w3 Hi! Where am I, exactly?\w3 Why are you a skeleton? \w8\0\s[0]...I know skeleton monsters are supposedly rare,\w4\s[8] but am I really that surprising?\w8\1\n\n[half]\s[10]A skeleton \f[italic,true]monster\f[italic,false]?\w4 What in the world is going on here???\w8\0\n\n[half]???\w5 Does Mt. Ebbot not ring any bells?\w3 Am I in an alternate dimension??\w4\n\f[height,6]Again...?\f[height,default]\w8\1\n\n[half]\s[10]Alternate... dimension?\w4 Well, we certainly-\w2 \1\s[31]OH HI THERE WHO ARE YOU?!\x\c\0\s[2]A hu-\w4 .\w4.\w4.\w4\s[8]? \w8\w6\s[0]You brought us here, didn't you?\w8\1\c\s[31]How would you even do that? Some strange age this must be.\w8\0\n\n[half]\s[8]Indeed. \w4\s[0]Well, since we're here, why don't you tell us your name and pronouns? That way we won't mess up our grammar.\x\w8\1\c\s[10]Hey, what's this about grammar?\n\n[half]/
 		\w5\_q\![*]\q[He/Him/His,choicefirsthehim]\n/
 		\![*]\q[She/Her/Hers,choicefirstsheher]\n/
 		\![*]\q[They/Them/Their,choicefirsttheythem]\e"
@@ -120,6 +122,7 @@ Select.choicefirsttheythem
 	heshe = "they"
 	hisher = "their"
 	hershis = "theirs"
+	pluralpro = "true"
 	--
 	NameInput
 }
@@ -247,7 +250,7 @@ OnBoot
 	//***********************************************************************
 	
 	{
-				"\0\s[0]It's October 4th today. s\[5]That's my birthday!\e"
+				"\0\s[6]It's October 4th today. \s[5]That's my birthday!\e"
 	}
 	elseif dayslot == "12month 19day"
 	{
@@ -304,7 +307,7 @@ normalboottalk
 		{
 		"\0\s[0]G'morning, %(username).\e"
 		
-		"\1\s[10]Morning %(username)!\w8\0\s[0]Hello!\e"
+		"\1\s[10]Morning %(username)!\w8\0\s[0]Hello.\e"
 		}
 		elseif timeslot == "lunch"
 		{
@@ -367,7 +370,7 @@ OnClose
 				{
 					"\1\s[10]Bye!\w8\0\s[0]'M gonna get some sleep now...\w8"
 					
-					"\0\s[0]*yawn* g'night- er, bye!\w8\1\s[10]See you later?\w2 (Alligator.)\w8\w8"
+					"\0\s[0]*yawn* g'night- \s[8]er, \w5\s[0]bye!\w8\1\s[10]See you later?\w2 (Alligator.)\w8\w8"
 				}
 			elseif timeslot == "morning"
  				{
@@ -381,7 +384,7 @@ OnClose
  				}
  			elseif timeslot == "afternoon"
  				{
- 					"\0\s[0]  \w8\1\s[10]I'm gonna look for a sandwich.\w8"
+ 					"\0\s[0]Have a good rest of your day, %(username).\w8\1\s[10]I'm gonna look for a sandwich.\w8"
 					
  					"\1\s[10]Do you have pancakes anywhere here?\w8\0\s[0]...\s[8]I'm hungry now.\w8"
  				}
@@ -433,7 +436,13 @@ OnClose
  	{
  		"\0\s[0]Oh, done already?\w8\w8"
 		
- 		"\1\s[14]Don't you want to stay?\w8\0\s[0]I suppose not then.\w8\w8"
+		"\0\s[8]That was short... \w4did you call us by mistake?\w8\w8"
+		
+ 		"\1\s[14]Don't you want to stay?\w8\0\s[8]I suppose not.\w8\w8"
+		
+		"\0\s[0]Oh, \w4okay.\w8\w8"
+		
+		"\0\s[8]Not right now, then?\w8\w8"
  	}
  	--
 	"\-\e" //this bit of code actually closes and ends the ghost. Because \e is here, you don't have to end each line above with it. Again, this will come up very rarely, so OnClose is an unusual case.

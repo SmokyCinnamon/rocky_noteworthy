@@ -44,26 +44,21 @@ On_recommendrootbutton.caption
 
 On_sakura.recommendsites
  {
-	"Ghost Template Walkthrough"
+	"Zarla's Ghost Template"
 	--
 	//This first line is the name that will display in the menu for your site. In this case, it would display "Ghost Template Walkthrough".
 	"%ASC(1)http://www.ashido.com/ukagaka/walkthrough.html%ASC(2)"
 	--
 	//And this is the site that it would link to. Note that a website address begins with %ASC(1) and ends with %ASC(2). Don't forget these!
 	
-	"Zarla's LJ"
+	"Smoky's Tumblr"
 	--
-	"%ASC(1)http://zarla.livejournal.com/%ASC(2)"
-	--
-	
-	"Zarla's Tumblr"
-	--
-	"%ASC(1)http://zarla-s.tumblr.com/%ASC(2)"
+	"%ASC(1)https://smokycinnamonroll.tumblr.com/%ASC(2)"
 	--
 	
-	"Zarla's Dreamwidth"
+	"Dragon's Tumblr"
 	--
-	"%ASC(1)http://zarla.dreamwidth.org/%ASC(2)"
+	"%ASC(1)http://dragonpanther888.tumblr.com/%ASC(2)"
 	--
 	
 	"SSP"

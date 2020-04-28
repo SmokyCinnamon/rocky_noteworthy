@@ -15,11 +15,28 @@
 
 OpenSakuraMenu
 {
+	if friendlylevel >= 21
+	{
 		"\0\s[0]\b2What's up? Other than the sky."
 		"\0\s[0]\b2Need something?"
 		"\0\s[0]\b2Hmm?"
 		--
 		MenuRun
+	}
+	elseif friendlylevel <= 0
+	{
+		"\0\s[7]\b2...."
+		--
+		MenuRun
+	}
+	else
+	{
+		"\0\s[4]\b2What is it now?"
+		"\0\s[4]\b2Mmm?"
+		"\0\s[4]\b2Is it important...?"
+		--
+		MenuRun
+	}
 }
 
 //--MenuRun
@@ -136,8 +153,18 @@ Getnowhour
 
 Select.questionmenu
 {
-	"\![*]\q[Family,familytalk]\n/
-	\![*]\q[Touching,touchtalk]\n\n[half]/
+	"\![*]\q[Family,familytalk]\n"
+	--
+	if askedstim == 1
+	{
+		"\![*]\q[Stimming,stimmybean]\n"
+	}
+	else
+	{
+		"\![*]\q[Flappy hands,stimexpo]\n"
+	}
+	--
+	"\![*]\q[Touching,touchtalk]\n\n[half/
 	\![*]\q[Back to menu,BACKTOMENU]\n/
 	\![*]\q[Nevermind,CANCEL]\e"
 }
@@ -145,7 +172,19 @@ Select.questionmenu
 Select.familytalk
 {
 	"I have a brother, actually! \w4His name's Char.%(nendmenu)\e" 
-	
+	"My uncle is what one would call a \f[italic,true]pun connoisseur\f[italic,false]. \s[8]A lot of people don't appreciate it, though.%(nendmenu)\e"
+	"\s[8]Do alternate versions of yourself and their families count as part of your family? \w4Because I've met a couple. \wIt's very strange.%(nendmenu)\e"
+	"There aren't many skeletons around anymore. \w4\s[8]Or fire elementals, for that matter. \w4\s[0]Dunno why, s'just the way it is. \w4So I don't have the biggest family around.\n\n[half]\s[8]...unless we just have a lot of super secret family tucked into void pockets or something that nobody ever bothered to tell me about. \w4\s[0]...but that's unlikely.%(nendmenu)\e"
+}
+
+Select.stimmybean
+{
+	"\s[8]What about it? \w4\s[9]If you're trying to tell me to stop, \w4that's a hard no.%(nendmenu)\e"
+}
+Select.stimexpo
+{
+	askedstim += 1
+	"\s[8]That's... \w4just a thing??? \w4I do??? \w4It's called stimming. \w4Are you unfamiliar with the terminology? I don't feel like explaining right now, \w4\s[0]but you could probably look it up! \w6\s[8]Um... sorry if I sounded rude or anything, I didn't mean it that way. \w4\s[9]Even if it is kind of a rude thing to ask, I feel like. \w4\s[8]I dunno. \w4Maybe it's just me.%(nendmenu)\e"
 }
 Select.touchtalk
 {
@@ -155,11 +194,12 @@ Select.touchtalk
 	}
 	elseif friendlylevel >=70
 	{
-		"You can pet me if you want, that's alright. \w4\s[8]I'd prefer if you didn't touch my face though.%(nendmenu)\e"
+		"You can pet me if you want, that's alright. \w4\s[8]I'd prefer if you didn't touch my face though. That's weird.%(nendmenu)\e"
 	}
 	elseif friendlylevel >=20
 	{
 		"...\s[8]I'd actually prefer if you didn't touch me.%(nendmenu)\e"
+		"...\s[8]Please don't touch me right now.%(nendmenu)\e"
 	}
 	elseif friendlylevel <= 0
 	{
@@ -169,7 +209,6 @@ Select.touchtalk
 	{
 		"\s[4]. \w4. \w4. \w8\s[7]don't touch me, human.%(nendmenu)\e"
 	}
-	
 }
 Select.itemmenu
 {
@@ -188,22 +227,23 @@ Select.jellybean
 }
 Select.smellslikepancake
 {
+	friendlylevel +=4
 	"\s[8]Oh, \w4\s[6]Thank you!%(itemend)\e"
 }
 Select.nothanks
 {
 	friendlylevel +=2
-	"No thank you. I don't like coffee.%(itemend)\e"
+	"\s[0]No thank you. I don't like coffee.%(itemend)\e"
 }
 Select.giveplush
 {
 	friendlylevel +=5
-	"(You give her a cat plushie.)\n\s[6]Thanks %(username)!%(itemend)\e"
-	"(You give them a cat plushie.)\n\s[6]Thanks %(username)!%(itemend)\e"
-	"(You give them a fish plushie.)\n\s[6]Thank you!%(itemend)\e"
-	"(You give her a fish plushie.)\n\s[6]Thank you!%(itemend)\e"
-	"(You give them a bird plushie.)\n\s[6]Thanks!%(itemend)\e"
-	"(You give her a bird plushie.)\n\s[6]Thanks!%(itemend)\e"
+	"\s[0](You give her a cat plushie.)\n\s[6]Thanks %(username)!%(itemend)\e"
+	"\s[0](You give them a cat plushie.)\n\s[6]Thanks %(username)!%(itemend)\e"
+	"\s[0](You give them a fish plushie.)\n\s[6]Thank you!%(itemend)\e"
+	"\s[0](You give her a fish plushie.)\n\s[6]Thank you!%(itemend)\e"
+	"\s[0](You give them a bird plushie.)\n\s[6]Thanks!%(itemend)\e"
+	"\s[0](You give her a bird plushie.)\n\s[6]Thanks!%(itemend)\e"
 }
 Select.BACKTOMENU
 	{
@@ -264,6 +304,12 @@ Select.choicemasc
 	hisher = "his"
 	hershis = "his"
 	--
+	if pluralpro == "true"
+	{
+		pluralpro = "false"
+	}
+	--
+	--
 	"\0\s[0]Your pronouns are now he him and his.\e"
 	//Leave the part above the double dashes alone. You can replace the snip of dialogue however with whatever you like.
 }
@@ -276,6 +322,12 @@ Select.choicefem
 	hisher = "her"
 	hershis = "hers"
 	--
+	if pluralpro == "true"
+	{
+		pluralpro = "false"
+	}
+	--
+	--
 	"\0\s[0]Your pronouns are now she her and her.\e"
 	//as above, you can also replace this dialogue.
 }
@@ -287,6 +339,12 @@ Select.choiceneither
 	heshe = "they"
 	hisher = "their"
 	hershis = "theirs"
+	--
+	if pluralpro == "false"
+	{
+		pluralpro = "true"
+	}
+	--
 	--
 	"\0\s[0]Your pronouns are now they them and their.\e"
 	//and this one.
@@ -559,10 +617,21 @@ Select.TALKNORMAL
 //If the user chooses every five minutes. This is the default rate the ghost will start up in, as seen in bootend.dic.
 Select.TALKPOOR
 	{
- 		talktime = "5 minutes"
-		aitalkinterval = 400
-		
- 		"\1\s[10]But five minutes is a long time!\e"
+		{
+			if freindlylevel >= 70
+			{
+				talktime = "5 minutes"
+				aitalkinterval = 400
+				
+				"\1\s[10]But five minutes is a long time!\e"
+			}
+			else
+			{
+				talktime = "5 minutes"
+				aitalkinterval = 400
+				"\1\s[31]If you say so.\e"
+			}
+		}
 	}
 
 //If the user chooses to not have them speak. This is one case where you MIGHT want to make talktime equal something else, if you have a snappier way of saying the ghost won't talk. Make sure it flows well in your menus though, since it will be displayed in your config menu.
@@ -702,7 +771,7 @@ OnChoiceTimeout
 OpenKeroMenu
  {
 	 {
-		if friendlylevel >=50
+		if friendlylevel >=70
 			{
 				"\1\s[10]\b[2]"
 	
@@ -716,8 +785,8 @@ OpenKeroMenu
 				\![*]\q[Bug report,bugreport]\n/
 				\![*]\q[Do you like me?,welldoyou]\n/
 				//\![*]\q[Levels,testlevels]\n/
-				//\![*]\q[Item menu,ritems]\n\n/
-				\![*]\q[Test variable,testvariable]\n\n/
+				\![*]\q[Item menu,ritems]\n\n/
+				//\![*]\q[Test variable,testvariable]\n\n/
 				//When you are done with the test variable, aka your ghost is finished or you just don't want it showing up when you publish your ghost beta or whatevs, simply add two // slashes in front of \![*] to comment the line out. In Notepad++, it will turn green. When you want to use it again, erase the two slashes to turn it back to normal.
 				\![*]\q[Nothing,keroCANCEL]\n\n\n/
 				%(friendlylevel)\e"
@@ -733,8 +802,8 @@ OpenKeroMenu
 				\![*]\q[Bug report,bugreport]\n/
 				\![*]\q[Don't you like me?,welldoyou]\n/
 				\![*]\q[Do you want something?,ritems]\n\n/
-				//\![*]\q[Test variable,testvariable]\n\n/
-				\![*]\q[Nothing,keroCANCEL]\n\n\n/
+				\![*]\q[Test variable,testvariable]\n\n/
+				\![*]\q[Done.,keroCANCEL]\n\n\n/
 				%(friendlylevel)\e"
 			}
 			else
@@ -784,11 +853,11 @@ Select.bugreport
 	{
 		if friendlylevel >= 20
 		{
-			"\1\s[10]Have bug-type things? \w5Report bugs to youremailaddress@emailprovider.com. \w5We were downloaded from \_a[https://github.com/SmokyCinnamon/rocky_noteworthy]some place\_a.\e"
+			"\1\s[10]Have bug-type things? \w5Tell them to...\w3 smokycinnamonroll on, uh\w3.. tumblr?\n\w4You and your internet things.\n\n \w5We were downloaded from \_a[https://github.com/SmokyCinnamon/rocky_noteworthy]this internet thing\_a.\e"
 		}
 		else
 		{
-			"\1\s[34]...\n\f[italic,true](Report bugs to place. Downloaded from \_a[https://github.com/SmokyCinnamon/rocky_noteworthy]place\_a.)\f[italic,false]%(rendmenu)\e"
+			"\1\s[34]...\n\f[italic,true](Report bugs to @smokycinnamonroll on tumblr.\nDownloaded from \_a[https://github.com/SmokyCinnamon/rocky_noteworthy]github\_a.)\f[italic,false]%(rendmenu)\e"
 		}
 	}
 }
@@ -804,7 +873,7 @@ Select.welldoyou
 	{
 		"\1\s[15]Well of course I do!%(rendmenu)\e"
 	}
-	elseif friendlylevel >= 50
+	elseif friendlylevel >= 70
 	{
 		"\1\s[32]Huh? What do you mean?%(rendmenu)\e"
 	}
@@ -877,8 +946,8 @@ Select.keromenu
 
 //It is ALWAYS A GOOD IDEA to test your dialogue! If you won't check it with the test variable, at least test it with Script Input! It'll save you so much trouble!
 
-/*Select.testvariable
+Select.testvariable
 {
-	friendlylevel = -50
-	"\1\s[10]Testing! levels are %(friendlylevel)\e"
+	askedstim = 0
+	"\1 asked stim is %(askedstim).\e"
 }*/

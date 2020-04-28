@@ -38,13 +38,32 @@ blanklist
 
 rendmenu
 {
-	"\n\n[half]\![*]\q[Back to menu,keromenu]\n/
-	\![*]\q[Nothing,keroCANCEL]"
+	{
+		if freindlylevel >=70
+		{
+			"\n\n[half]\![*]\q[Back to menu,keromenu]\n/
+			\![*]\q[Nothing,keroCANCEL]"
+		}
+		else
+		{
+			"\n\n[half]\![*]\q[Back.,keromenu]\n/
+			\![*]\q[I'm done.,keroCANCEL]"
+		}
+	}
 }
 
 ritemend
 {
-	"\n\n[half]\![*]\q[Something else?,ritems]%(rendmenu)"
+	{
+		if friendlylevel>=70
+		{
+			"\n\n[half]\![*]\q[Something else?,ritems]%(rendmenu)"
+		}
+		else
+		{
+			"\n\n[half]\![*]\q[Take more.,ritems]%(rendmenu)"
+		}
+	}
 }
 
 nendmenu

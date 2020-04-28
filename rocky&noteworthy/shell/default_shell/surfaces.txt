@@ -4,72 +4,7 @@
 //Images are brought together into a thing I generally refer to as a pose, but what is defined in the shell and this text file as a Surface. Each Surface can contain any number of images in it doing any number of things. These Surfaces are what is being called when you use the \s[] tag when writing dialogue. For example, you could create a pose with three images under Surface5, and then in dialogue, you would call that pose made of three images with \s[5]. That's the basic jist of how this file works.
 //I wrote up some pages about making images and surfaces.txt on the walkthrough (http://www.ashido.com/ukagaka/walkthrough.html) so I highly recommend you read those as well.
 
-//I will reiterate that you should be editing these in Notepad++, and in particular, you should set the Language to C (or Java I guess) to properly highlight all the text. It will make things A LOT EASIER for you, trust me! It will also help you keep track of your brackets in case you forget some. If you click on a line with a bracket in Notepad++, it should highlight where the other bracket ends, or turn purple if there's no finishing bracket (which you should definitely fix!)
-//It will also highlight my commented lines in green, so you'll know where they are. Any line beginning with // is a commented line that the code will not read. It's just for your reference!
-
-//There are a lot of crazy tricks you can do with surfaces.txt if you're creative and determined, but you won't have to worry about any of them (although I will include some commented out examples for my own reference). The easiest, easiest way to do this file is simply to replace the images I've already made. There should be around 10 poses for each character defined in surfaces.txt. They break down like this.
-
-//0 - Girl's default pose. This is made up of a few images.
-	//surface0.png, her full default frame with her eyes and mouth in place to layer stuff on.
-	//surface1001.png, her half-closed eyes
-	//surface1002.png, her closed eyes. These two frames are used to make her blinking animation.
-	//surface1101.png, her half-open mouth
-	//surface1102.png, her open mouth. These two frames are used for her talking animation.
-//1 - Girl's embarrassed pose.
-	//From here on, each pose is a single still image. This is surface1501.png
-//2 - Girl's surprised pose.
-	//surface1502.png
-//3 - Girl's worried pose.
-	//surface1503.png
-//4 - Girl's sad/disappointed pose.
-	//surface1504.png
-//5 - Girl's smiling pose.
-	//surface1505.png
-//6 - Girl's contented pose.
-	//surface1506.png
-//7 - Girl's angry pose.
-	//surface1507.png
-//8 - Girl's thoughtful pose.
-	//surface1508.png
-//9 - Girl's bored pose.
-	//surface1509.png
-//10 - Triangle's default pose. Like Girl, this pose is broken up into multiple pieces because it has an animation.
-	//surface10.png, his default base frame to layer stuff on.
-	//surface2001.png, his half-closed eyes.
-	//surface2002.png, his closed eyes. These are for his blinking animation.
-//11 - Triangle's embarrassed pose. Like above, these are single still frames.
-	//surface2501.png 
-//12 - Triangle's surprised pose.
-	//surface2502.png
-//13 - Triangle's worried pose.
-	//surface2503.png
-//14 - Triangle's sad/disappointed pose.
-	//surface2504.png
-//15 - Triangle's smiling pose.
-	//surface2505.png
-//16 - Triangle's contented pose.
-	//surface2506.png
-//17 - Triangle's angry pose.
-	//surface2507.png
-//18 - Triangle's thoughtful pose.
-	//surface2508.png
-//19 - Triangle's bored pose.
-	//surface2509.png
-
-//If you look at the image files themselves, you'll see that all the images for Girl are in the 1000 range, and the images for Triangle are in the 2000. ALL YOU NEED TO DO is draw your character with whatever expression you want and save it over the appropriate file. That way, you won't have to adjust any of the coding in surfaces.txt itself, you'll just be replacing the images. You should read through this file anyway though to get an idea of how it works.
-
-//However, there is one snag here! Girl's default pose has blinking eyes and a moving mouth, and for that, you'll need to study the files for that pose very carefully. Note that the different eye frames and mouth frames are separate files and only have the eyes and the mouths in them. You'll have to do the same. All you have to do is select around your eyes, inverse, delete everything, and save it for each eye frame, and likewise for the mouth frames. I talk about this in a bit more detail in the making images section of the walkthrough page. Hopefully it won't be too hard. If worse comes to worse and you just can't get it to work, you can delete the blinking and talking sequences from surface0 if you have to.
-//(Basically, what surfaces.txt does is overlay the mouth or eye frames on top of your base image to make the animation. That's why all you want in that overlaid frame is the eyes or the mouth.)
-//Likewise, if you want to add blinking eyes and a moving mouth to your other poses, you'll have to do the same thing as with the default pose - make individual frames for the eyes and mouth, copy and paste the code for the blinking/mouth sections in surface0 to the other surface you want to add them to, and replace the file numbers where appropriate.
-
-//You can change the size of the images if you want to draw a much bigger character than I did! If you do that though, MAKE SURE ALL YOUR IMAGES FOR THAT CHARACTER ARE THE SAME SIZE. So if Girl's image dimensions are 400x400, and you draw a Main Character that's 800x800, MAKE SURE ALL the images for your main character are also 800x800! This applies to the side character too, ALL the images for your side character should be the same dimensions! If your side character is 250x250, all side character images should be 250x250!
-//The main character and the side character DON'T have to be the same size though, so you can have a tiny sidekick and a huge dude if you want, like... I dunno, Gillian Seed and Metal Gear Mk. II for example, or Torin and Boggle. The image dimensions just need to be consistent throughout for each character, because believe me, it will make things MUCH, MUCH easier for you from this point on if you do that.
-
-//SAVE ALL IMAGES FOR YOUR MAIN CHARACTER IN THE 1000-1999 RANGE, AND SAVE ALL IMAGES FOR YOUR SECOND CHARACTER IN THE 2000-2999 RANGE. Not to get into the exact reason why right now but just trust me, this will save you a headache in the long run. I'm looking at you, self reading this in the future. 
-
-//ONE MORE NOTE - If you are planning on doing a single person ghost without a sidekick character at all, all you have to do is save a blank png over all the files for the secondary character, ESPECIALLY Surface10.png. Then just don't write any dialogue for the secondary character in the .dic files. Problem solved.
-//More advanced users can even rewrite the poses in this file originally intended for the secondary character, 11-19, for their main character instead if you need to and save main character poses over the second character ones, AS LONG AS Surface10.png is blank.
-
+//(snip)
 
 //Alright, now let's get into the coding.
 
@@ -78,37 +13,26 @@
 //--The Main Character's Poses---------------------------------------------------------
 
 surface0
-//surface0 is the basic default pose for your main character. I'll include a few examples of things you can do in this pose, but you won't have to use any of them if you don't want to. They're mostly for (my) reference and advanced users for the most part.
+//(snip)
 {
 collision0,96,14,154,36,NHead
 collision1,92,38,141,77,NFace
 
 //Collisions define "hot spots" on your ghost where the user can pet or double click them (as defined in mouse.dic). You can see that there are two collisions here, collision0 and collision1. You can add more by copypasting and raising the number, like collision2, collision3, collision4, and so on.
 //The four numbers after that are x/y coordinates. Specifically, the first two numbers are the x/y coordinates of the TOP LEFT corner of your hotspot. The third and fourth numbers are the coordinates of the BOTTOM RIGHT corner of the hotspot. Essentially, this is outlining a rectangle.
-//To find the hotspot on your ghost, first draw a rectangle on your image where you want the hotspot. Like the top of their head for petting. Then get the coordinates of the top left corner of that rectangle. You can do this in Photoshop with the Info tab I believe, or if you open the image up in MSPaint, it should tell you the coordinates in the bottom bar. Point your cursor at that corner, write those coordinates down, and put them in here. In this case, it was 57,22. Then do the same with the bottom right corner - 112,46. I show what some of these rectangles look like in the surfaces.txt section of the walkthrough.
+//(snip)
 //After that, you have to name the area you highlighted. In collision0's case, the area is named "Head". If you go into mouse.dic, you'll see that this name is referenced when the mouse is over that area or interacting with it. Remember what word you use for what area. You can call the areas whatever you want, just make sure it's consistent between surfaces.txt and mouse.dic.
 //Then basically repeat this for any other collisions you may want to set up. You can have as many collisions as you want for as many places on your ghost as you want!
 
 //Collisions only apply to the Surface they're in, unless they're appended using surface.append in the above section. This means you can have certain collisions that only appear in certain poses, like giving your character a high five when their hand is up. You can be creative with these.
-
-//If you REALLY can't figure out collisions and just can't get them to work, you can delete the two collision lines. This will make your ghost un-pettable though and much of what you defined in mouse.dic won't work. Their menus should still function though I think. But if you are desperate, this is an option.
-
+//(snip)
 element0,overlay,surface1401.png,0,0
 element1,overlay,surface0.png,0,0,
 element2,overlay,surface1301.png,0,0,
-//Here is the line of code that defines the base image we'll be using for the ghost. If you aren't just replacing my images and moving on, you'll want to replace the surface0.png part with whatever image file you're using as your base pose. But really, your base default pose should ALWAYS be surface0.png for your main character. There are very few situations where this line would need to be changed in any way. Likewise, I wouldn't change it for your secondary character's default pose either.
+//(snip)
 
 
-//*********************Advanced User Info*******************************
-//These text boxes are meant for those who have an interest in expanding or using more complicated functions in their ghost. Also for my own reference in the future since I plan on using this template too, haha. If you have no interest in any of this and just want to keep things as simple as possible, feel free to skip these boxes.
-
-//A note about element - you can have multiple elements! You can layer them on top of each other if you want, and they'll be there permanently in the pose. So for example, you could do something like this
-
-//element0,overlay,surface0.png,0,0
-//element1,overlay,surface9.png,0,0
-
-//Where surface0 could be the body, and surface9 could be the head. I don't normally use this very often, but if you want to have something always on your ghost and don't want to use an always interval, this may be the way to do it. It could work for things like having a body that doesn't change and a head that changes expressions, for example.
-//***********************************************************************
+//(snip)
 
 
 //--Blinking---------------------------------------------------------------------------
@@ -120,8 +44,7 @@ element2,overlay,surface1301.png,0,0,
 0pattern2,1001,10,overlayfast,0,0
 0pattern3,-1,3,overlay,0,0
 
-//For those just replacing my images, you won't have to mess with any of this. Just be sure that your blink frames look like my blink frames. For those who are going to reuse this block or do their own thing, all you need to do is replace 1001 and 1002 with the file numbers of your new blink frames. Everything else can stay exactly the same.
-//I could explain exactly what each line means and how it breaks down, but that's not really information that's super necessary for what you're going to be doing. Someday when I finish the whole ghost site, I'll have a specific page about surfaces.txt breaking down exactly how all this works, but for now, we're shortcutting a little. I will very briefly explain it though. If this is confusing, don't worry too much about it right now.
+//(snip)For those who are going to reuse this block or do their own thing, all you need to do is replace 1001 and 1002 with the file numbers of your new blink frames. (snip)
 //You can think of an "interval" as a set block defining an animation, like a blink in this case, and you'll notice each interval is followed by a number of lines starting with "pattern". The pattern lines are the frames that make up the animation. I've seen this described once like interval is a paragraph, and pattern are the lines of the paragraph.
 //Anyway, the front number of the interval matches the front number of the pattern associated with it - 0interval, 0pattern. The number after pattern is the frame number, in this case going up to frame 3 - 0pattern1, 0pattern2, 0pattern3. The number after that is the image you're using - 1002, the number after that is the delay on the frame before it - 5. The word after that is the animation method you're using for the frame, in this case a mix of overlay and overlayfast, and the last two numbers are the x/y coordinates of the images - 0,0.
 //Other animation methods besides overlay and overlayfast are base, move, and replace. More on those below.
@@ -149,21 +72,8 @@ element2,overlay,surface1301.png,0,0,
 4pattern0,1102,14,overlay,0,0
 4pattern1,-1,10,overlay,0,0
 
-//These three intervals handle the talk frames. For those who are doing their own thing or adding talk frames to their other Surfaces, all you need to do is copy and paste the talk blocks (1interval to 4interval) into the Surface you want and replace 1101 and 1102 with the appropriate file numbers for your new talk frames. You can leave the rest of it alone. Those just replacing my images don't have to worry about any of this, as long as your mouth frames look like mine.
-//IMPORTANT NOTE: IF YOU'RE DOING A PROFILE VIEW AND YOUR MOUTH IS MOVING OUTSIDE THE BODY meaning that if you had a silhouette of your base frame, the mouth's movement would be outside that silhouette, then you're going to need to use Replace instead. I'm sorry for your loss. You can look through the Advanced User box below until you find the section on Replace to try and figure out how it works. Your other option is to change your pose or move your mouth or do something to make sure your mouth's movement does not break your character's silhouette. As a rule of thumb, keeping your character's mouth movement inside their silhouette in general makes things much easier for you, but sometimes it's just not possible. If any furries are reading this, you will probably run into this problem a lot with any kind of side-view of a muzzle. Read on ahead to the Replace section.
-
-//IF YOU ABSOLUTELY CAN'T GET THE BLINKING/TALKING FRAMES TO LOOK RIGHT
-//If it comes to that, you can delete those chunks of code and just leave surface0 like the other simple poses below. It'd look something like
-
-//surface0
-//{
-//collision0,57,22,112,46,Head
-//collision1,65,50,105,91,Face
-
-//element0,overlay,surface0.png,0,0
-//}
-
-//And that's it. You can do this with Triangle below too, if you just can't get it to work. If you do do this, make sure to delete the blinking/talking .png files as well to clear up any error messages that may come up as a result of them not being used.
+//(snip)For those who are doing their own thing or adding talk frames to their other Surfaces, all you need to do is copy and paste the talk blocks (1interval to 4interval) into the Surface you want and replace 1101 and 1102 with the appropriate file numbers for your new talk frames. (snip)
+//(snip)
 
 
 //*********************Advanced User Info*******************************
@@ -312,8 +222,7 @@ element2,overlay,surface1301.png,0,0,
 //***********************************************************************
 }
 
-//Wow, that was a lot of really complicated text. But don't worry, from this part on, the surfaces will be very very short and simple! That's because this template is set up to use stationary images for poses instead of animated ones like surface0 above. Because the other surfaces won't have blinking eyes or moving mouths or anything like that, all you have to do is put in the right file number and they'll be done. And if you're just replacing my images, you probably won't have to do anything!
-//This isn't to say you can't ADD blinking and talking frames to these surfaces if you want to. It's easy! All you have to do is copy the right code chunks from surface0 and paste them in here, then replace the file numbers as you need. And you'd have to draw the frames of course.
+//(snip)
 
 //Main Character Embarrassed pose
 surface1
@@ -345,8 +254,8 @@ element2,overlay,surface1301.png,0,0
 //Noteworthy's upset pose
 surface4
 {
-	collision0,96,16,150,38,NHead
-	collision1,101,41,149,81,NFace
+collision0,96,16,150,38,NHead
+collision1,101,41,149,81,NFace
 
 element0,overlay,surface1504.png,0,0
 }
@@ -410,11 +319,10 @@ element0,overlay,surface1506.png,0,0
 //Noteworthy's shutdown pose
 surface7
 {
-	collision0,96,16,150,38,NHead
-	collision1,101,41,149,81,NFace
+collision0,87,9,159,46,NHead
+collision1,100,48,151,75,NFace
 	
 element1,overlay,surface1507.png,0,0
-
 }
 
 //Noteworthy's thinking pose

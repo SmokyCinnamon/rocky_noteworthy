@@ -90,17 +90,18 @@ MouseMoveSakura
 				{
 					friendlylevel -=1
 					"\0\s[9]Don't do that.\e"
-					"\0\s[4]Cut it out.\e"
+					"\0\s[9]Cut it out.\e"
 					"\0\s[4]Are you trying to steal my glasses?\e"
 					"\0\s[9]Could you not?\w4\s[4]I don't like that.\e"
 				}
 				elseif friendlylevel >=70
 				{
-					friendlylevel >-2
+					friendlylevel -=2
 					"\0\s[4]Are you trying to steal my glasses?\e"
 					"\0\s[9]Stop that.\e"
 					"\0\s[9]Could you not?\w4\s[4]I don't like that.\e"
 					"\0\s[4]Stop it.\e"
+					"\0\s[4]Why though??\e"
  				}
 				elseif friendlylevel >=20
 				{
@@ -119,6 +120,7 @@ MouseMoveSakura
 				{
 					friendlylevel -=2
 					"\0\s[7]Stop it!\e"
+					"\0\s[7]Haven't I told you to stop?! \w4Quit it!\e"
 				}
 				
  			}
