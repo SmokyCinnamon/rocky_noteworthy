@@ -7,13 +7,14 @@ group,N
 scope,0
 0,Default
 1,Embarrassed?
-2,Surprised?
+2,Surprised
 3,Worried?
 4,Upset
 5,Excited
 6,Happy
 7,Shutdown
 8,Thinking
+9,Annoyed
 
 group,R
 {
