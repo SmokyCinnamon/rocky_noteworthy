@@ -803,6 +803,7 @@ OpenKeroMenu
 				\![*]\q[Don't you like me?,welldoyou]\n/
 				\![*]\q[Do you want something?,ritems]\n\n/
 				\![*]\q[Test variable,testvariable]\n\n/
+				//\![*]\q[Test variable,testvariable]\n\n/
 				\![*]\q[Done.,keroCANCEL]\n\n\n/
 				%(friendlylevel)\e"
 			}
