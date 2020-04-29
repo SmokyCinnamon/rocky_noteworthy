@@ -91,6 +91,7 @@ MouseMoveSakura
 				if friendlylevel >=200
 				{
 					friendlylevel -=1
+					"\0\s[4]Did I ever tell you not to touch my face? \w4\s[9]Because if I didn't I'm saying it now.\e"
 					"\0\s[9]Don't do that.\e"
 					"\0\s[9]Cut it out.\e"
 					"\0\s[4]Are you trying to steal my glasses?\e"
@@ -253,7 +254,7 @@ MouseDoubleClickSakura
 		{
 			friendlylevel -=5
 			"\0\s[4]Stop it, \w4%(username).\e"
-			"\0\s[4][D-don't... \w8\s[7]don'ttouchme...\e"
+			"\0\s[4]D-don't... \w8\s[7]don'ttouchme...\e"
 		}
  	}
 	elseif reference4 == "NHead" //Pats

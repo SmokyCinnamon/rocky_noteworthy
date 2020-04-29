@@ -171,44 +171,45 @@ Select.questionmenu
 
 Select.familytalk
 {
-	"I have a brother, actually! \w4His name's Char.%(nendmenu)\e" 
-	"My uncle is what one would call a \f[italic,true]pun connoisseur\f[italic,false]. \s[8]A lot of people don't appreciate it, though.%(nendmenu)\e"
-	"\s[8]Do alternate versions of yourself and their families count as part of your family? \w4Because I've met a couple. \wIt's very strange.%(nendmenu)\e"
-	"There aren't many skeletons around anymore. \w4\s[8]Or fire elementals, for that matter. \w4\s[0]Dunno why, s'just the way it is. \w4So I don't have the biggest family around.\n\n[half]\s[8]...unless we just have a lot of super secret family tucked into void pockets or something that nobody ever bothered to tell me about. \w4\s[0]...but that's unlikely.%(nendmenu)\e"
+	"\s[0]I have a brother, actually! \w4His name's Char.%(askmore)\e" 
+	"\s[0]My uncle is what one would call a \f[italic,true]pun connoisseur\f[italic,false]. \s[8]A lot of people don't appreciate it, though.%(askmore)\e"
+	"\s[8]Do alternate versions of yourself and their families count as part of your family? \w4Because I've met a couple. \wIt's very strange.%(askmore)\e"
+	"\s[0]There aren't many skeletons around anymore. \w4\s[8]Or fire elementals, for that matter. \w4\s[0]Dunno why, s'just the way it is. \w4So I don't have the biggest family around.\n\n[half]\s[8]...unless we just have a lot of super secret family tucked into void pockets or something that nobody ever bothered to tell me about. \w4\s[0]...but that's unlikely.%(askmore)\e"
+	"\s[0]My pop used to run a bar back when monsterkind was trapped in the underground. \w4\s[8]If I remember correctly, \w4that's actually how he and dad first met.%(askmore)\e"
 }
 
 Select.stimmybean
 {
-	"\s[8]What about it? \w4\s[9]If you're trying to tell me to stop, \w4that's a hard no.%(nendmenu)\e"
-	"\s[8]What about it? \w4Was I being weird in my explanation? \w4I'm sorry.%(nendmenu)\e"
+	"\s[8]What about it? \w4Was I being weird in my explanation? \w4I'm sorry.%(askmore)\e"
+	"\s[8]What about it? \w4\s[9]If you're trying to tell me to stop, \w4that's a hard no.%(askmore)\e"
 }
 Select.stimexpo
 {
 	askedstim += 1
-	"\s[8]That's... \w4just a thing??? \w4I do??? \w4It's called stimming. \w4Are you unfamiliar with the terminology? I don't feel like explaining right now, \w4\s[0]but you could probably look it up! \w6\s[8]Um... sorry if I sounded rude or anything, I didn't mean it that way. \w4\s[9]Even if it is kind of a rude thing to ask, I feel like. \w4\s[8]I dunno. \w4Maybe it's just me.%(nendmenu)\e"
+	"\s[8]That's... \w4just a thing??? \w4I do??? \w4It's called stimming. \w4Are you unfamiliar with the terminology? I don't feel like explaining right now, \w4\s[0]but you could probably look it up! \w6\s[8]Um... sorry if I sounded rude or anything, I didn't mean it that way. \w4\s[9]Even if it is kind of a rude thing to ask, I feel like. \w4\s[8]I dunno. \w4Maybe it's just me.%(askmore)\e"
 }
 Select.touchtalk
 {
 	if friendlylevel >=200
 	{
-		"\s[6]Ehehe, \w4yeah pets and stuff are totally fine!%(nendmenu)\e"
+		"\s[6]Ehehe, \w4yeah pets and stuff are totally fine!%(askmore)\e"
 	}
 	elseif friendlylevel >=70
 	{
-		"You can pet me if you want, that's alright. \w4\s[8]I'd prefer if you didn't touch my face though. That's weird.%(nendmenu)\e"
+		"You can pet me if you want, that's alright. \w4\s[8]I'd prefer if you didn't touch my face though. That's weird.%(askmore)\e"
 	}
 	elseif friendlylevel >=20
 	{
-		"...\s[8]I'd actually prefer if you didn't touch me.%(nendmenu)\e"
-		"...\s[8]Please don't touch me right now.%(nendmenu)\e"
+		"...\s[8]I'd actually prefer if you didn't touch me.%(askmore)\e"
+		"...\s[8]Please don't touch me right now.%(askmore)\e"
 	}
 	elseif friendlylevel <= 0
 	{
-		"\s[4].\w4.\w4.\w4\s[7]mmmh...%(nendmenu)\e"
+		"\s[4].\w4.\w4.\w4\s[7]mmmh...%(askmore)\e"
 	}
 	else
 	{
-		"\s[4]. \w4. \w4. \w8\s[7]don't touch me, human.%(nendmenu)\e"
+		"\s[4]. \w4. \w4. \w8\s[7]don't touch me, human.%(askmore)\e"
 	}
 }
 Select.itemmenu
@@ -216,6 +217,7 @@ Select.itemmenu
 	"\![*]\q[Jellybeans,jellybean]\n/
 	\![*]\q[Pancakes,smellslikepancake]\n/
 	\![*]\q[Coffee,nothanks]\n/
+	\![*]\q[Book,givebook]\n/
 	\![*]\q[Plushie,giveplush]\n\n[half/
 	\![*]\q[Back to menu,BACKTOMENU]\n/
 	\![*]\q[Nothing,CANCEL]\e"
@@ -236,17 +238,17 @@ Select.nothanks
 	friendlylevel +=2
 	"\s[0]No thank you. I don't like coffee.%(itemend)\e"
 }
+Select.givebook
+{
+	friendlylevel +=3
+	"%(bookthem)\e"
+	"%(bookher)\e"
+}
 Select.giveplush
 {
 	friendlylevel +=5
-	"\s[0](You give her a cat plushie.)\n\s[6]Thanks %(username)!%(itemend)\e"
-	"\s[0](You give them a cat plushie.)\n\s[6]Thanks %(username)!%(itemend)\e"
-	"\s[0](You give them a fish plushie.)\n\s[6]Thank you!%(itemend)\e"
-	"\s[0](You give her a fish plushie.)\n\s[6]Thank you!%(itemend)\e"
-	"\s[0](You give them a bird plushie.)\n\s[6]Thanks!%(itemend)\e"
-	"\s[0](You give her a bird plushie.)\n\s[6]Thanks!%(itemend)\e"
-	"\s[0](You give her a dragon plushie.)\n\s[6]Aw, thank you!%(itemend)\e"
-	"\s[0](You give them a dragon plushie.)\n\s[6]Aw, thank you!%(itemend)\e"
+	"%(theirplushnow)\e"
+	"%(herplushnow)\e"
 }
 Select.BACKTOMENU
 	{
