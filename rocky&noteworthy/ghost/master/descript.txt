@@ -24,7 +24,7 @@ kero.name,Rocky
 
 craftman,smokycinnamonroll and dragonpanther888
 craftmanw,SmokyCinnamonRoll & DragonPanther888
-craftmanurl,http://www.ashido.com/ukagaka/walkthrough.html
+craftmanurl,https://raw.githubusercontent.com/SmokyCinnamon/rocky_noteworthy/master/rocky%26noteworthy
 
 
 //This is coding stuff, don't touch it.

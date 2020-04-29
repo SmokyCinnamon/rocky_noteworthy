@@ -17,5 +17,3 @@ Hotkeys:
 t = make them talk
 r = repeat what they just said
 ctrl = ...I think this makes them speed through dialogue? Or just skip to the end of it. I've only accidentally used this while saving things and such, haha
-
-Made with Zarla's ghost template http://www.ashido.com / http://www.ashido.com/ukagaka/walkthrough.html
