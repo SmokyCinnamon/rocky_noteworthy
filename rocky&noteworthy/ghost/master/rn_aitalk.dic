@@ -125,6 +125,8 @@ RandomTalk : nonoverlap
 		"\1\s[10]Hello!\e"
 		
 		"\1\s[10]Hi.\w5\n\nI'm dying a slow death of pancake-deprivation.\e"
+		
+		"\0\s[8]Y'know, I kinda wish I'd brought a book or something with me...\e"
 	}
 	elseif friendlylevel >= 20 //less than enthused
 	{

@@ -185,7 +185,7 @@ Select.stimmybean
 }
 Select.stimexpo
 {
-	askedstim += 1
+	askedstim = 1
 	"\s[8]That's... \w4just a thing??? \w4I do??? \w4It's called stimming. \w4Are you unfamiliar with the terminology? I don't feel like explaining right now, \w4\s[0]but you could probably look it up! \w6\s[8]Um... sorry if I sounded rude or anything, I didn't mean it that way. \w4\s[9]Even if it is kind of a rude thing to ask, I feel like. \w4\s[8]I dunno. \w4Maybe it's just me.%(askmore)\e"
 }
 Select.touchtalk
