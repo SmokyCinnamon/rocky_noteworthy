@@ -82,7 +82,7 @@ MouseMoveSakura
 				else 
 				{
 					friendlylevel -=2
-					"\0\s[7]Could you-! \w8\s[9](sigh) could you not?\e"
+					"\0\s[7]Could you-! \w8\s[4](sigh) \w3\s[9]could you not?\e"
 					"\0\s[4]I don't want to be touched right now.\e"
 				}
  			}

@@ -127,6 +127,8 @@ RandomTalk : nonoverlap
 		"\1\s[10]Hi.\w5\n\nI'm dying a slow death of pancake-deprivation.\e"
 		
 		"\0\s[8]Y'know, I kinda wish I'd brought a book or something with me...\e"
+		
+		"\0\s[0]Talking! \w4Yes! \w4This is a thing that I am good at, \w4and make use of on a daily basis!\e"
 	}
 	elseif friendlylevel >= 20 //less than enthused
 	{
@@ -186,9 +188,6 @@ RandomTalk : nonoverlap
 		"\0\s[8]. . .\w4\e"
 			
 		"\0\s[8]We're not bothering you, \w4are we?\e"
-
-		"\1\s[17]You look nice, %(username). \1\s[31]Doesn't %(heshe) look nice? Wouldn't you agree Noteworthy?\e"
-		
 	}
 	elseif friendlylevel <= 0 //scared I guess?
 	{
@@ -211,7 +210,8 @@ RandomTalk : nonoverlap
 		"\0\s[7]......\w4\n(She's rattling...)\e"
 		
 		"\0\s[7]......\w4\n(They're rattling...)\e"
-
+		
+		"\0\s[7].....\e"
 	}
 	else
 	{
