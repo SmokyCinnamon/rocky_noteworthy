@@ -26,6 +26,8 @@ dic, rn_commu.dic
 dic, rn_nameteach.dic
 dic, rn_anchor.dic
 
+dic.cactusfriend.dic
+
 //---- Log Location -------------------------------------------------------------------------
 //I'm not entirely sure what this does, but basically don't touch it.
 

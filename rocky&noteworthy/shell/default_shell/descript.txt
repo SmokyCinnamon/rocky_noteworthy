@@ -94,6 +94,10 @@ menu.sidebar.bitmap.filename,menu_sidebar.png
 
 //kero.bindgroup55.name,face,glasses
 //kero.bindgroup57.name,hair,hairpins
+kero.bindgroup51.name,ribbon,yellow
+kero.bindgroup51.default,1
+kero.bindgroup52.name,ribbon,red
+kero.bindgroup52.default,0
 
 
 //Dress-Up Menu Organization
@@ -102,5 +106,9 @@ menu.sidebar.bitmap.filename,menu_sidebar.png
 //sakura.menuitem0,51
 
 //kero.menuitem0,55
+kero.menuitem0,51
+kero.menuitem1,52
+
+kero.bindoption0.group,ribbon,mustselect
 //kero.menuitem1,-
 //kero.menuitem2,57

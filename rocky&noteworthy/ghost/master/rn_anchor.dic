@@ -18,6 +18,7 @@
 OnTranslate
 	{
 	_talk = reference0
+	_talk = REPLACE (_talk, "]", "]%(pancakepals)") //...this might end up messing with noteworthy's surfaces but i dunno
  	_talk = REPLACE(_talk, "Anchor 1", "\_a[anchor1]Anchor 1\_a")
  	_talk = REPLACE(_talk, "Anchor 2", "\_a[anchor2]Anchor 2\_a")
  	_talk = REPLACE(_talk, "Anchor 3", "\_a[anchor3]Anchor 3\_a")
@@ -53,7 +54,7 @@ OnAnchorSelect
 			}
 			when "anchor3" //if the link is this value
 			{
-				"\1\s[10]This dialogue is for when Anchor 3 is clicked.\e"
+				"\1%(ten)This dialogue is for when Anchor 3 is clicked.\e"
 			}
 		}
 	}

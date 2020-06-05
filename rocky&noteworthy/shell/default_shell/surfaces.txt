@@ -661,7 +661,242 @@ element4,overlay,surface2000.png,0,0
 element5,overlay,surface2110.png,0,0
 }
 //And that's it! We're done! You can move on to some other aspect of your ghost now. But before we go, there are a few more little things you may want to think about.
+Surface50
+{
+collision0,14,10,158,154,Cactus
+collision1,36,150,123,197,Pot
 
+element1,overlay,surface3000.png,0,0
+//ribbon yellow
+51interval,bind
+51pattern0,3001,2,add,0,0
+//ribbon red
+52interval,bind
+52pattern0,3002,2,add,0,0
+}
+
+//70-99 pancake mode... ugh i hate this.
+surface70
+{
+collision0,88,120,171,76,Face
+collision1,88,39,171,75,Head
+
+element0,overlay,surface10.png,0,0
+element1,overlay,surface10.png,0,0
+element2,overlay,surface2300.png,0,0
+
+0interval,always
+0pattern0,2200,0,overlay,0,0
+0pattern1,2200,1,overlay,0,0
+
+1interval,always
+1pattern0,10,0,overlay,0,0
+1pattern1,10,1,overlay,0,0
+
+2interval,always
+2pattern0,2300,0,overlay,0,0
+2pattern1,2300,1,overlay,0,0
+
+3interval,always
+3pattern0,2000,0,overlay,0,0
+3pattern1,2000,1,overlay,0,0
+
+4interval,always
+4pattern0,2100,0,overlay,0,0
+4pattern1,2100,1,overlay,0,0
+
+5interval,always
+5pattern0,2403,0,overlay,0,0
+5pattern1,2403,1,overlay,0,0
+
+//look around
+6interval,random,400
+6pattern0,2400,5,overlay,0,0
+6pattern1,0,0,stop,3
+6pattern2,0,0,stop,4
+6pattern3,0,0,stop,5
+6pattern4,2401,50,overlay,0,0
+6pattern5,2400,100,overlay,0,0
+6pattern6,2402,195,overlay,0,0
+6pattern7,2402,5,overlay,0,0
+6pattern8,2400,195,overlay,0,0
+6pattern9,0,0,start,3
+6pattern10,0,0,start,4
+6pattern11,0,0,start,5
+}
+//Side Character Embarrassed pose
+surface71 ///*
+{
+	collision0,88,120,171,76,Face
+	collision1,88,39,171,75,Head
+	
+element1,overlay,surface2200.png,0,0
+element2,overlay,surface10.png,0,0
+element3,overlay,surface2301.png,0,0
+element4,overlay,surface2000.png,0,0
+element5,overlay,surface2102.png,0,0
+element6,overlay,surface2403.png,0,0
+}
+//Side Character Surprised pose
+surface72
+{
+	collision0,88,120,171,76,Face
+	collision1,88,39,171,75,Head
+	
+element1,overlay,surface2201.png,0,0
+element2,overlay,surface10.png,0,0
+element3,overlay,surface2000.png,0,0
+element4,overlay,surface2103.png,0,0
+element5,overlay,surface2305.png,0,0
+element6,overlay,surface2403.png,0,0
+}
+//Side Character Worried pose
+surface73
+{
+	collision0,88,120,171,76,Face
+	collision1,88,39,171,75,Head
+	
+element1,overlay,surface2202.png,0,0
+element2,overlay,surface10.png,0,0
+element3,overlay,surface2300.png,0,0
+element4,overlay,surface2000.png,0,0
+element5,overlay,surface2103.png,0,0
+element6,overlay,surface2403.png,0,0
+}
+//Side Character Sad/Disappointed pose
+surface74
+{
+	collision0,88,120,171,76,Face
+	collision1,88,39,171,75,Head
+	
+element1,overlay,surface2202.png,0,0
+element2,overlay,surface10.png,0,0
+element3,overlay,surface2302.png,0,0
+element4,overlay,surface2000.png,0,0
+element5,overlay,surface2105.png,0,0
+element6,overlay,surface2403.png,0,0
+}
+//Side Character Smiling pose
+surface75
+{
+	collision0,88,120,171,76,Face
+	collision1,88,39,171,75,Head
+	
+element1,overlay,surface2200.png,0,0
+element2,overlay,surface10.png,0,0
+element3,overlay,surface2300.png,0,0
+element4,overlay,surface2000.png,0,0
+element5,overlay,surface2102.png,0,0
+element6,overlay,surface2403.png,0,0
+}
+//Side Character Contented pose
+surface76
+{
+	collision0,88,120,171,76,Face
+	collision1,88,39,171,75,Head
+	
+element1,overlay,surface2200.png,0,0
+element2,overlay,surface10.png,0,0
+element3,overlay,surface2300.png,0,0
+element4,overlay,surface2000.png,0,0
+element5,overlay,surface2107.png,0,0
+element6,overlay,surface2403.png,0,0
+}
+//Side Character Angry pose
+surface77
+{
+	collision0,88,120,171,76,Face
+	collision1,88,39,171,75,Head
+	
+element1,overlay,surface2200.png,0,0
+element2,overlay,surface10.png,0,0
+element3,overlay,surface2304.png,0,0
+element4,overlay,surface2000.png,0,0
+element5,overlay,surface2106.png,0,0
+element6,overlay,surface2403.png,0,0
+}
+//Side Character Thoughtful pose
+surface78
+{
+	collision0,88,120,171,76,Face
+	collision1,88,39,171,75,Head
+	
+element1,overlay,surface2200.png,0,0
+element2,overlay,surface10.png,0,0
+element3,overlay,surface2300.png,0,0
+element4,overlay,surface2000.png,0,0
+element5,overlay,surface2104.png,0,0
+element6,overlay,surface2403.png,0,0
+}
+//Side Character Bored pose
+surface79
+{
+	collision0,88,120,171,76,Face
+	collision1,88,39,171,75,Head
+	
+element1,overlay,surface2200.png,0,0
+element2,overlay,surface10.png,0,0
+element3,overlay,surface2301.png,0,0
+element4,overlay,surface2000.png,0,0
+element5,overlay,surface2100.png,0,0
+element6,overlay,surface2403.png,0,0
+}
+surface90 //hey! listen!
+{
+collision0,88,120,171,76,Face
+	collision1,88,39,171,75,Head
+element1,overlay,surface2200.png,0,0
+element2,overlay,surface10.png,0,0
+element3,overlay,surface2000.png,0,0
+element4,overlay,surface2111.png,0,0
+element5,overlay,surface2305.png,0,0
+element6,overlay,surface2403.png,0,0
+}
+Surface91 //grin2
+{
+collision0,88,120,171,76,Face
+	collision1,88,39,171,75,Head
+element1,overlay,surface2200.png,0,0
+element2,overlay,surface10.png,0,0
+element3,overlay,surface2300.png,0,0
+element4,overlay,surface2000.png,0,0
+element5,overlay,surface2106.png,0,0
+element6,overlay,surface2403.png,0,0
+}
+Surface92 /...huh?
+{
+collision0,88,120,171,76,Face
+	collision1,88,39,171,75,Head
+element1,overlay,surface2200.png,0,0
+element2,overlay,surface10.png,0,0
+element3,overlay,surface2300.png,0,0
+element4,overlay,surface2000.png,0,0
+element5,overlay,surface2108.png,0,0
+element6,overlay,surface2403.png,0,0
+}
+Surface93 //smileteeth
+{
+collision0,88,120,171,76,Face
+	collision1,88,39,171,75,Head
+element1,overlay,surface2200.png,0,0
+element2,overlay,surface10.png,0,0
+element3,overlay,surface2300.png,0,0
+element4,overlay,surface2000.png,0,0
+element5,overlay,surface2109.png,0,0
+element6,overlay,surface2403.png,0,0
+}
+Surface94 //sadworried????
+{
+collision0,88,120,171,76,Face
+	collision1,88,39,171,75,Head
+element1,overlay,surface2202.png,0,0
+element2,overlay,surface10.png,0,0
+element3,overlay,surface2301.png,0,0
+element4,overlay,surface2000.png,0,0
+element5,overlay,surface2110.png,0,0
+element6,overlay,surface2403.png,0,0
+//*/
+}
 
 //--surface.append-------------------------------------------------------------------
 //This function is primarily for advanced users, so you can skip it if it seems too scary to you. Otherwise, read on. It may be useful.
@@ -669,14 +904,14 @@ element5,overlay,surface2110.png,0,0
 //Surface.append basically applies the coding within the brackets to the poses specified in the number range. Specifically in this case it applies to collisions. If the collision areas for your ghost don't change very much from pose to pose, then you can set them here for multiple surfaces at once and save yourself some time.
 //I'm not actually going to use surface.append since Girl and Triangle move around too much for their collisions to be that consistent between poses, but it's something could potentially come in handy for advanced users or ghost makers who have very stationary ghosts, so I'll leave it here and just append it to surfaces that don't exist so it won't get in the way. If you want to use this, study this example and see how it can apply to your own ghost.
 
-surface.append500-590 //this is appending this code to Surface500 through Surface590.
+surface.append10-19,30-34 //this is appending this code to Surface500 through Surface590.
 //There are actually a few special ways you can refine this! For example, surface.append500-590,205 would append the code to Surface500 to Surface590, as well as Surface205. 
 //surface.append500-590,205,!507-509 it would do the same, except it would skip Surfaces507 through 509.
 //you can have multiple surface.appends as well, if you want to append one set of code to one range of surfaces and another to another. For example, one set of collisions to your main character and one to your side character.
 {
-collision0,15,16,111,48,Face
-collision1,40,50,102,84,Point
-
+60interval,never
+60pattern0,2403,0,overlay,0,0
+//element6,overlay,surface2403.png,0,0
 //Because this is under surface.append, that means that these collisions are being set for every surface between the number range specified, in this case every Surface from 500 to 590. Make sure to put surface.append at the end of your file, so it can append the values to surfaces that exist.
 
 //--bind-------------------------------------------------------------------------------

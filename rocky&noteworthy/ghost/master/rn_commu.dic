@@ -98,8 +98,8 @@ ReplyToGhost
 
 		//replace these lines with whatever responses you like. res_reference0 in this case will be the name of the ghost they're replying to.
 	{
-	"\0\s[0]Hello, %(res_reference0).\w8\1\s[10]Hope you're doing well.\e"
+	"\0\s[0]Hello, %(res_reference0).\w8\1%(ten)Hope you're doing well.\e"
 	
-	"\1\s[10]Hey, %(res_reference0).\e"
+	"\1%(ten)Hey, %(res_reference0).\e"
 	}
 }

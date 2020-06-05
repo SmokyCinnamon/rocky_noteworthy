@@ -45,6 +45,10 @@ OnFirstBoot
 	friendlylevel = 70
 	pluralpro = "false"
 	askedstim = 0
+	pettedrocky = 0
+	seencactus = 0
+	uncomfortableroark = 0
+	pancaketime = "off"
 	
 	if reference0 == 0 //Don't touch this line.
  	{
@@ -53,7 +57,7 @@ OnFirstBoot
 		//You'll also notice that this dialogue is black instead of grey. This is because of the use of the backwards slash as mentioned in the advanced section of the SakuraScripting page. Do you see near the bottom where it has \n\n[half]/ with the other slash at the end before the choices are listed? You will want to replace dialogue up that \n\n[half], but do not mess with the choices beyond that unless you know what you're doing.
 		//Always make sure to keep your dialogue in the quotation marks! And remember, you can't use quotation marks IN dialogue either. You can use two single apostrophes instead if you must. And REMEMBER what I said about \![enter,passivemode]! Do NOT delete that tag!
 		
-		"\![enter,passivemode]\0\s[0]\1\s[10]Um...\w3 Hi! Where am I, exactly?\w3 Why are you a skeleton? \w8\0\s[0]...I know skeleton monsters are supposedly rare,\w4\s[8] but am I really that surprising?\w8\1\n\n[half]\s[10]A skeleton \f[italic,true]monster\f[italic,false]?\w4 What in the world is going on here???\w8\0\n\n[half]???\w5 Does Mt. Ebbot not ring any bells?\w3 Am I in an alternate dimension??\w4\n\f[height,6]Again...?\f[height,default]\w8\1\n\n[half]\s[10]Alternate... dimension?\w4 Well, we certainly-\w2 \1\s[31]OH HI THERE WHO ARE YOU?!\x\c\0\s[2]A human? \w4\s[0]Did you bring us here?\w8\1\c\s[31]How would you even do that? Some strange age this must be.\w8\0\n\n[half]\s[8]Indeed. \w4\s[0]Well, since we're here, why don't you tell us your name and pronouns? That way we won't mess up our grammar.\x\w8\1\c\s[10]Hey, what's this about grammar?\n\n[half]/
+		"\![enter,passivemode]\0\s[0]\1%(ten)Um...\w3 Hi! Where am I, exactly?\w3 Why are you a skeleton? \w8\0\s[0]...I know skeleton monsters are supposedly rare,\w4\s[8] but am I really that surprising?\w8\1\n\n[half]%(ten)A skeleton \f[italic,true]monster\f[italic,false]?\w4 What in the world is going on here???\w8\0\n\n[half]???\w5 Does Mt. Ebbot not ring any bells?\w3 Am I in an alternate dimension??\w4\n\f[height,6]Again...?\f[height,default]\w8\1\n\n[half]%(ten)Alternate... dimension?\w4 Well, we certainly-\w2 \1\s[31]OH HI THERE WHO ARE YOU?!\x\c\0\s[2]A human? \w4\s[0]Did you bring us here?\w8\1\c\s[31]How would you even do that? Some strange age this must be.\w8\0\n\n[half]\s[8]Indeed. \w4\s[0]Well, since we're here, why don't you tell us your name and pronouns? That way we won't mess up our grammar.\x\w8\1\c%(ten)Hey, what's this about grammar?\n\n[half]/
 		\w5\_q\![*]\q[He/Him/His,choicefirsthehim]\n/
 		\![*]\q[She/Her/Hers,choicefirstsheher]\n/
 		\![*]\q[They/Them/Their,choicefirsttheythem]\e"
@@ -76,7 +80,7 @@ OnFirstBoot
  	{
 		//---- This is dialogue for when the user uninstalls the ghost for whatever reason, then reinstalls them again. They will run this dialogue instead of their normal dialogue above. You can change this to reflect the fact the user's uninstalled your ghost once, or you can make it the same as the above, it's up to you. You'll see this if you try to run OnFirstBoot using ![raise].
  		{
- 		"\![enter,passivemode]\0\s[0]\1\s[10]Um...\w3 Hi! Where am I, exactly?\w3 Why are you a skeleton? \w8\0\s[0]...I know skeleton monsters are supposedly rare,\w4\s[8] but am I really that surprising?\w8\1\n\n[half]\s[10]A skeleton \f[italic,true]monster\f[italic,false]?\w4 What in the world is going on here???\w8\0\n\n[half]???\w5 Does Mt. Ebbot not ring any bells?\w3 Am I in an alternate dimension??\w4\n\f[height,6]Again...?\f[height,default]\w8\1\n\n[half]\s[10]Alternate... dimension?\w4 Well, we certainly-\w2 \1\s[31]OH HI THERE WHO ARE YOU?!\x\c\0\s[2]A hu-\w4 .\w4.\w4.\w4\s[8]? \w8\w6\s[0]You brought us here, didn't you?\w8\1\c\s[31]How would you even do that? Some strange age this must be.\w8\0\n\n[half]\s[8]Indeed. \w4\s[0]Well, since we're here, why don't you tell us your name and pronouns? That way we won't mess up our grammar.\x\w8\1\c\s[10]Hey, what's this about grammar?\n\n[half]/
+ 		"\![enter,passivemode]\0\s[0]\1%(ten)Um...\w3 Hi! Where am I, exactly?\w3 Why are you a skeleton? \w8\0\s[0]...I know skeleton monsters are supposedly rare,\w4\s[8] but am I really that surprising?\w8\1\n\n[half]%(ten)A skeleton \f[italic,true]monster\f[italic,false]?\w4 What in the world is going on here???\w8\0\n\n[half]???\w5 Does Mt. Ebbot not ring any bells?\w3 Am I in an alternate dimension??\w4\n\f[height,6]Again...?\f[height,default]\w8\1\n\n[half]%(ten)Alternate... dimension?\w4 Well, we certainly-\w2 \1%(31)OH HI THERE WHO ARE YOU?!\x\c\0\s[2]A hu-\w4 .\w4.\w4.\w4\s[8]? \w8\w6\s[0]You brought us here, didn't you?\w8\1\c%(31)How would you even do that? Some strange age this must be.\w8\0\n\n[half]\s[8]Indeed. \w4\s[0]Well, since we're here, why don't you tell us your name and pronouns? That way we won't mess up our grammar.\x\w8\1\c%(ten)Hey, what's this about grammar?\n\n[half]/
 		\w5\_q\![*]\q[He/Him/His,choicefirsthehim]\n/
 		\![*]\q[She/Her/Hers,choicefirstsheher]\n/
 		\![*]\q[They/Them/Their,choicefirsttheythem]\e"
@@ -141,7 +145,7 @@ NameInput
 {
 	//Note that there's a \![leave,passivemode] tag in this dialogue! Don't forget about this! If you leave them in passivemode they won't talk at all and it'd sort of defeat the purpose, right? I actually forgot this for a while with Hunter and Smoker and didn't notice because OnFirstBoot only runs once, so it took me some testing to find out what was wrong. Always make sure to leave passivemode when you're done with it!
 	
-	"\1\s[10]I guess grammar \f[italic,true]is\f[italic,false] important... \![leave,passivemode]\w8\0\s[0]What would you like us to call you? \![open,inputbox,OnNameTeach,-1]\e"
+	"\1%(ten)I guess grammar \f[italic,true]is\f[italic,false] important... \![leave,passivemode]\w8\0\s[0]What would you like us to call you? \![open,inputbox,OnNameTeach,-1]\e"
 	
 	//At the end of this dialogue there's a tag saying "\![open,inputbox,OnNameTeach,-1]". It basically leads to the naming function defined in nameteach.dic, so don't touch it. Make sure it's there though! Otherwise your user won't have a way to put in their name. :o
 	
@@ -220,7 +224,7 @@ OnBoot
 	passmin = 0
 	passsec = 0
 	
- 	"\0\s[0]\1\s[10]" //This sets them up in their neutral pose for now.
+ 	"\0\s[0]\1%(ten)" //This sets them up in their neutral pose for now.
 	
 	//If you don't want to deal with individual day messages when you boot them, you can delete everything down to the end bracket for OnBoot (use Notepad++'s bracket tracking abilities to find where it is!) and instead add "%(normalboottalk)" to the end of the snip of dialogue up there that sets them up in their neutral poses. I'm pretty sure that should shortcut it properly.  Otherwise, read on ahead!
 	--
@@ -237,7 +241,7 @@ OnBoot
 	//***********************************************************************
 	
 	{
-				"\0\s[0]It's %(bornmonthprint) %(borndayprint)!\w8\1\s[10]Happy birthday, %(username)! Do you want syrup?\w2 ......Pancakes?\e"
+				"\0\s[0]It's %(bornmonthprint) %(borndayprint)!\w8\1%(ten)Happy birthday, %(username)! Do you want syrup?\w2 ......Pancakes?\e"
 				
 				//Notice in this dialogue that there are two new envelopes, %(bornmonthprint) and %(borndayprint). These two things basically display the user's birthday - bornmonthprint is the month and borndayprint is the day. These were defined when the user put in their birthday in the menu.dic file. See word.dic for more info on envelopes.
 				//If the user didn't or hasn't put in their birthday yet, this dialogue will basically never get called. Which makes sense.
@@ -254,7 +258,7 @@ OnBoot
 	}
 	elseif dayslot == "12month 19day"
 	{
-				"\1\s[10]Hey, it's my birthday! Another year 'round the earth, huh?\w4\n\n.\w3.\w3.\w3 So did you get me anything?\e"
+				"\1%(ten)Hey, it's my birthday! Another year 'round the earth, huh?\w4\n\n.\w3.\w3.\w3 So did you get me anything?\e"
 				
 				//You can see how these basically work. You can add in new elseif statements along these same lines with your own dayslots if you want to have them say things for all sorts of days. You can also change these existing ones I put in as examples to other dates, like your character's birthdays, perhaps. This is up to you! If you don't care about this, you can delete all the elseifs and just leave the one for the user's birthday.
 	}
@@ -285,11 +289,11 @@ normalboottalk
 		}
 	elseif RAND(100) < 40 //What this does is choose a random number from 1-100, and then checks if that number is less than 40. If it's less than forty, then these dialogue pieces will occur. Remember, you can have multiple lines of dialogue within one set of brackets like this! You just need to make sure they're all enclosed in their own set of quotation marks.
 		{
-		"\1\s[10]Hello!\0\s[0]Hi %(username)!\e"
+		"\1%(ten)Hello!\0\s[0]Hi %(username)!\e"
 	
-		"\1\s[10]Do you think %(username) has pancakes?\w8\0\s[8]I mean it's certainly a possibility.\e"
+		"\1%(ten)Do you think %(username) has pancakes?\w8\0\s[8]I mean it's certainly a possibility.\e"
 	
-		"\1\s[10]Hey, what's up?\0\s[0]The sky.\e"
+		"\1%(ten)Hey, what's up?\0\s[0]The sky.\e"
 		}
  	else
  	{
@@ -297,47 +301,47 @@ normalboottalk
 		
 		if timeslot == "earlymorning" //The following dialogue will be called if they are booted during the time specified in GetTimeSlot (in this case, the hour being more than/equal to 5 but less than/equal to 8). Remember, you can add as many lines of dialogue here as you want, or take away as many as you want! Replace the dialogue here with what you see fit.
 		{
-		"\0\s[0]Mmgh... oh, hello human. *yawn* 's early, isn't it?\w8\1\s[10]Hi! I'm awake!\e"
+		"\0\s[0]Mmgh... oh, hello human. *yawn* 's early, isn't it?\w8\1%(ten)Hi! I'm awake!\e"
 		
-		"\1\s[10]Damn, it's early. Gonna need me some coffee.\w8\0\s[0]mumble mumble... (dirty bean water...)\e"
+		"\1%(ten)Damn, it's early. Gonna need me some coffee.\w8\0\s[0]mumble mumble... (dirty bean water...)\e"
 		
-		"\1\s[10]Do you perchance have pancakes?\w2 And syrup.\w3 Don't forget the syrup.\w8\0\s[0]Ooh, pancakes.\e"
+		"\1%(ten)Do you perchance have pancakes?\w2 And syrup.\w3 Don't forget the syrup.\w8\0\s[0]Ooh, pancakes.\e"
 		}
 		elseif timeslot == "morning"
 		{
 		"\0\s[0]G'morning, %(username).\e"
 		
-		"\1\s[10]Morning %(username)!\w8\0\s[0]Hello.\e"
+		"\1%(ten)Morning %(username)!\w8\0\s[0]Hello.\e"
 		}
 		elseif timeslot == "lunch"
 		{
-		"\0\s[0]Hello, %(username)! It's lunchtime, isn't it?\1\s[10]Do you have a sandwich?\w4\1\s[17] For my cousin, you see.\w2 He likes sandwiches.\e"
+		"\0\s[0]Hello, %(username)! It's lunchtime, isn't it?\1%(ten)Do you have a sandwich?\w4\1\s[17] For my cousin, you see.\w2 He likes sandwiches.\e"
 		
-		"\1\s[10]Have you had any breakfast pastries yet?\w2 You should.\w4 Pancakes should always be your plan A.\e"
+		"\1%(ten)Have you had any breakfast pastries yet?\w2 You should.\w4 Pancakes should always be your plan A.\e"
 		}
 		elseif timeslot == "afternoon"
 		{
-		"\1\s[10]Good afternoon to you!\w8\0\s[0]Heya!\e"
+		"\1%(ten)Good afternoon to you!\w8\0\s[0]Heya!\e"
 		}
 		elseif timeslot == "evening" //18-20
 		{
- 		"\0\s[0]Good evening, %(username)! Day been treating you well?\1\s[10]Evenings should always be met with a healthy amount of pancakes.\e"
+ 		"\0\s[0]Good evening, %(username)! Day been treating you well?\1%(ten)Evenings should always be met with a healthy amount of pancakes.\e"
 		}
 		elseif timeslot == "latenight" //21-24
 		{
- 		"\0\s[0]Hello.\1\w8\s[10]It's late! Perfect time for some musical accompianment, don't you agree?\e"
+ 		"\0\s[0]Hello.\1\w8%(ten)It's late! Perfect time for some musical accompianment, don't you agree?\e"
 		
- 		"\0\s[0]Hey %(username)!\1\w8\s[10]Do you ever think about getting yourself a friend?\w2 Just a little cactus friend.\w4To watch over you.\e"
+ 		"\0\s[0]Hey %(username)!\1\w8%(ten)Do you ever think about getting yourself a friend?\w2 Just a little cactus friend.\w4To watch over you.\e"
 		
- 		"\1\s[10]Hm, getting late out?\w8\0\s[0]Evening %(username)!\e"
+ 		"\1%(ten)Hm, getting late out?\w8\0\s[0]Evening %(username)!\e"
 		}
 		else //the last timeslot we haven't done is midnight, which is what's under here. 0-5
 		{
-		"\0\s[0]Keeping late hours, %(username)?\1\w8\s[10]Do you have a little cactus friend?\w4 Do you want one?\e"
+		"\0\s[0]Keeping late hours, %(username)?\1\w8%(ten)Do you have a little cactus friend?\w4 Do you want one?\e"
 		
- 		"\0\s[8]If you haven't gone to sleep yet, \w4does it count as evening, \w4or morning? \w4Or even the next day?\1\w8\s[10]It's very extremely late.\w2 My poor cactus friend will be missing me!\e"
+ 		"\0\s[8]If you haven't gone to sleep yet, \w4does it count as evening, \w4or morning? \w4Or even the next day?\1\w8%(ten)It's very extremely late.\w2 My poor cactus friend will be missing me!\e"
 		
- 		"\1\s[10]It's midnight!\w2\nWanna have pancakes to celebrate this midnight occasion?\w8\0\s[0]Rocky I would love some pancakes.\w6\1\s[10]Ah, a fellow pancake conniseur, I see.\e"
+ 		"\1%(ten)It's midnight!\w2\nWanna have pancakes to celebrate this midnight occasion?\w8\0\s[0]Rocky I would love some pancakes.\w6\1%(ten)Ah, a fellow pancake conniseur, I see.\e"
 		}
 	}
 }
@@ -362,15 +366,15 @@ OnClose
 		{
 			if RAND(100) < 40 //see above about the random number generator
 			{
-				"\0\s[0]Ah, goodbye then!\w8\1\s[10]Oh, bye!\w8\w8"
+				"\0\s[0]Ah, goodbye then!\w8\1%(ten)Oh, bye!\w8\w8"
 			}
 			else
 			{
 			if timeslot == "earlymorning" //5-8
 				{
-					"\1\s[10]Bye!\w8\0\s[0]'M gonna get some sleep now...\w8"
+					"\1%(ten)Bye!\w8\0\s[0]'M gonna get some sleep now...\w8"
 					
-					"\0\s[0]*yawn* g'night- \s[8]er, \w5\s[0]bye!\w8\1\s[10]See you later?\w2 (Alligator.)\w8\w8"
+					"\0\s[0]*yawn* g'night- \s[8]er, \w5\s[0]bye!\w8\1%(ten)See you later?\w2 (Alligator.)\w8\w8"
 				}
 			elseif timeslot == "morning"
  				{
@@ -380,13 +384,13 @@ OnClose
  				{
  					"\0\s[0]Goodbye, human %(username)!\w8\1\s[17]I'm starving! Clearly there has been a lack of sufficient pancakes here.\w8"
 					
- 					"\0\s[0]Bye-bye. Don't forget to eat something if you haven't yet!\w8\1\s[10]Are you going to get pancakes?\w8"
+ 					"\0\s[0]Bye-bye. Don't forget to eat something if you haven't yet!\w8\1%(ten)Are you going to get pancakes?\w8"
  				}
  			elseif timeslot == "afternoon"
  				{
- 					"\0\s[0]Have a good rest of your day, %(username).\w8\1\s[10]I'm gonna look for a sandwich.\w8"
+ 					"\0\s[0]Have a good rest of your day, %(username).\w8\1%(ten)I'm gonna look for a sandwich.\w8"
 					
- 					"\1\s[10]Do you have pancakes anywhere here?\w8\0\s[0]...\s[8]I'm hungry now.\w8"
+ 					"\1%(ten)Do you have pancakes anywhere here?\w8\0\s[0]...\s[8]I'm hungry now.\w8"
  				}
   			elseif timeslot == "evening"
  				{
@@ -421,11 +425,11 @@ OnClose
  						{
  							"\1\s[17]You've been up late.\w8\0\s[0]Planning on getting some rest?\w8"
  						}
-						"\0\s[8]Oh, is that the time?\w8\1\s[10]Time for sleep, I suppose, then?\w8"
+						"\0\s[8]Oh, is that the time?\w8\1%(ten)Time for sleep, I suppose, then?\w8"
 						
-						"\1\s[10]On this very momentous midnight occasion, we've been called to evasion of you,\w3 and invasion of this computer\w2, too.\w8"
+						"\1%(ten)On this very momentous midnight occasion, we've been called to evasion of you,\w3 and invasion of this computer\w2, too.\w8"
 						
-						"\1\s[10]Well, my dear cactus friend will be happy to see me back...\w8\0\s[0]Goodbye!\w8"
+						"\1%(ten)Well, my dear cactus friend will be happy to see me back...\w8\0\s[0]Goodbye!\w8"
 				}
 			}
 				
@@ -459,7 +463,7 @@ OnClose
 
 OnWindowStateRestore
  {
-	"\0\s[2]Ah- \w3\s[8]um, hello again?\w8\1\s[10]What \f[italic,true]was\f[italic,false] that?\e"
+	"\0\s[2]Ah- \w3\s[8]um, hello again?\w8\1%(ten)What \f[italic,true]was\f[italic,false] that?\e"
 }
 
 
@@ -490,15 +494,15 @@ OnGhostChanging
 
 OnGhostChanged
 {
-	"\0\s[0]\1\s[10]" //this sets up their default poses
+	"\0\s[0]\1%(ten)" //this sets up their default poses
 	--
 	if reference0 == "Noteworthy" //As above, this should be the name of your ghost as in install.txt or descript.txt.
 	{
-		"\0\s[0]We've reloaded.\1\w8\s[10]Everything should be mostly probably fine now.\e"
+		"\0\s[0]We've reloaded.\1\w8%(ten)Everything should be mostly probably fine now.\e"
 	}
 	else //If you're switching to them from another ghost...
 	{
-		"\1\s[10]Bye, %(reference0)!\w8\0\s[0]Did you have fun?\e"
+		"\1%(ten)Bye, %(reference0)!\w8\0\s[0]Did you have fun?\e"
 
 		//Again, %(reference0) in this function is the name of the ghost in question. As above, replace these two lines of dialogue what what'd be appropriate for your ghost.
 	}
@@ -513,14 +517,14 @@ OnShellChanging
  {
 	if reference0 == "Hypothetical Shell that doesn't actually exist" //reference0 in OnShellChanging is the name of the shell you're swapping to. It should be defined in the descript.txt file in your shell folder. If you do have alternate shells, put in the right name here.
 	{
-	"\1\s[10]This dialogue is specifically for changing to this particular shell.\w8\0\w8\s[9]It totally exists.\w8\e"
+	"\1%(ten)This dialogue is specifically for changing to this particular shell.\w8\0\w8\s[9]It totally exists.\w8\e"
 	//Then rewrite this line as appropriate.
 	}
 	else //if you don't have any specific dialogue for a specific shell
 	{
-	"\0\s[0]This dialogue is for changing shells.\w8\1\s[10]Sure is.\w8\e"
+	"\0\s[0]This dialogue is for changing shells.\w8\1%(ten)Sure is.\w8\e"
 	
-	"\1\s[10]This is another bit of dialogue for changing shells.\w8\0\s[8]I wonder how many people will actually have multiple shells?\e"
+	"\1%(ten)This is another bit of dialogue for changing shells.\w8\0\s[8]I wonder how many people will actually have multiple shells?\e"
 	
 	//Rewrite these two lines as you need.
 	}
@@ -553,7 +557,7 @@ OnShellChanged
  	{
  		nowshell = "thiswouldbesomuchwork"
 		
- 		"\1\s[10]This dialogue is after we've switched to another totally real shell.\e"
+ 		"\1%(ten)This dialogue is after we've switched to another totally real shell.\e"
 		//Replace this as well.
  	}
  	else //For any shell without a specific name, or if you don't want to bother with individual responses to a shell.
@@ -592,22 +596,22 @@ else //if reference0 isn't the main character, then it has to be the side charac
 		{
 			if reference2 == 1 //If you put it on
 			{
-			"\1\s[10]I'm wearing some kind of clothing.\w8\0\s[8]Maybe a hat?\e"
+			"\1%(ten)I'm wearing some kind of clothing.\w8\0\s[8]Maybe a hat?\e"
 			}
 			else //When you take it off.
 			{
-			"\1\s[10]You took off some kind of clothing.\e"
+			"\1%(ten)You took off some kind of clothing.\e"
 			}
 		}
 	elseif reference1 == "i'm gonna say a propeller beanie" //As you've seen above, you can use elseifs to expand the list if you have more than one item.
 		{
 			if reference2 == 1 //if you're putting it on
 			{
-			"\1\s[10]You put a hat on me.\w8\0\s[6]lol.\w8\1\n\n[half]\s[11]Shaddap.\e"
+			"\1%(ten)You put a hat on me.\w8\0\s[6]lol.\w8\1\n\n[half]\s[11]Shaddap.\e"
 			}
 			else //when you take it off
 			{
-			"\1\s[10]You took off the hat.\e"
+			"\1%(ten)You took off the hat.\e"
 			}
 		}
 	}

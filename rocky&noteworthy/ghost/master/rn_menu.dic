@@ -556,12 +556,12 @@ birthchecked
 {
 	if userbirthday == dayslot //if today is the user's birthday
 		{
-			"\0\s[0]It's your birthday today, %(username)!\w8\1\s[10]Happy birthday, %(username)!\e"
+			"\0\s[0]It's your birthday today, %(username)!\w8\1%(ten)Happy birthday, %(username)!\e"
 			//replace this dialogue with whatever you like
 		}
 	/*elseif userbirthday == "12month 25day"
 		{
-			"\0\s[0]Birthday text?\w8\1\s[10]Happy birthday, %(username). \w5\s[15]Rocky look it's birthday dialogue for you\w8\0\n\n[half]More birthday dialogue! \s[9]\w4...will we ever add something here?\e"
+			"\0\s[0]Birthday text?\w8\1%(ten)Happy birthday, %(username). \w5\s[15]Rocky look it's birthday dialogue for you\w8\0\n\n[half]More birthday dialogue! \s[9]\w4...will we ever add something here?\e"
 			//As you can see, you can set up an elseif statement to check if the user's birthday is any day you want! More on elseif statements in bootend.dic. In this case, there's specialized dialogue if the user was born on Christmas. You can replace this with whatever you like, or change the date you're checking as well, like to one of your character's birthdays if you want. You can also delete this elseif if you don't care.
 		}*/
 	else //if the birthday is not listed above.
@@ -629,7 +629,7 @@ Select.TALKPOOR
 				talktime = "5 minutes"
 				aitalkinterval = 400
 				
-				"\1\s[10]But five minutes is a long time!\e"
+				"\1%(ten)But five minutes is a long time!\e"
 			}
 			else
 			{
@@ -709,15 +709,15 @@ Select.ChoiceGarbagecan
 	
 	if _gomicheck == 0 //If the recycle bin is empty.
 	{
-		"\0\s[0]Rocky, could you go check the recycle bin?\w8\1\s[19]Oh. Okay!\w8\w8\s[-1]\w8\w8\w8\w8\w8\1\s[10]\cWas that supposed to be empty?\e"
+		"\0\s[0]Rocky, could you go check the recycle bin?\w8\1\s[19]Oh. Okay!\w8\w8\s[-1]\w8\w8\w8\w8\w8\1%(ten)\cWas that supposed to be empty?\e"
 		
 		//This isn't the usual flat template dialogue, mostly because I wanted to show that this is a good place to use s[-1], which I covered in the walkthrough file. You can have your ghost disappear momentarily like they're going to check your recycle bin, then come back. \c clears the ghost's balloon of text. Replace dialogue as you desire.
 	}
 	elseif _gomicheck >= 1 //If the recycle bin is full.
 	{
-		"\0\s[0]Emptying the recycle bin.\w8\1\s[19]I'm going.\w8\w8\s[-1]\w8\w8\w8\w8\w8\![raise,OnGarbagecanEmpty]\w9\w9\w9\1\s[10]\cDone!\e"
+		"\0\s[0]Emptying the recycle bin.\w8\1\s[19]I'm going.\w8\w8\s[-1]\w8\w8\w8\w8\w8\![raise,OnGarbagecanEmpty]\w9\w9\w9\1%(ten)\cDone!\e"
 		
-		"\0\s[0]Taking out your computer trash.\w8\1\s[19]Oh, okay.\w8\w8\s[-1]\w8\w8\w8\w8\w8\![raise,OnGarbagecanEmpty]\w9\w9\w9\1\s[10]\cFinished!\e"
+		"\0\s[0]Taking out your computer trash.\w8\1\s[19]Oh, okay.\w8\w8\s[-1]\w8\w8\w8\w8\w8\![raise,OnGarbagecanEmpty]\w9\w9\w9\1%(ten)\cFinished!\e"
 		
 		//Somewhat similar to the above, but notice the \![raise],OnGarbagecanEmpty] tag in there. That's what actually empties the recycle bin, so make sure you don't delete that tag. Otherwise, replace the dialogue as you want.
 		//As you can see, you can have multiple pieces of dialogue in here, just like you can for many other functions scattered through the .dic files. If you only want the one, just delete the others, or if you want to add more, just copy and paste and write new dialogue as it comes to you. This applies to when the recycle bin is empty as well.
@@ -770,7 +770,6 @@ OnChoiceTimeout
 	"\0\s[0]Mmm.\e"
  }
 
- 
 //---- Secondary Character Menu ---------------------------------------------------------
 //This section has to do with the menu for the second character. If you don't want your second character to have a menu, you can just delete this whole chunk.
 
@@ -779,7 +778,7 @@ OpenKeroMenu
 	 {
 		if friendlylevel >=70
 			{
-				"\1\s[10]\b[2]"
+				"\1%(ten)\b[2]"
 	
 				//You've seen so far that you can set up multiple options for menu introductions. You can also set up multiple poses to match up to multiple dialogue. So for example, when you open Triangle's menu, he may randomly do any of these three poses, and randomly choose from any of the four dialogue options below, before continuing with his menu. Make a close note of the -- dashes breaking these up.
 				--
@@ -788,8 +787,20 @@ OpenKeroMenu
 				--
 				"\n\n[half]/
 				\![*]\q[Update,keroupdatecheck]\n/
-				\![*]\q[Bug report,bugreport]\n/
-				\![*]\q[Do you like me?,welldoyou]\n/
+				\![*]\q[Bug report,bugreport]\n/"
+				--
+				if pancaketime == "on"
+				{
+					"\![*]\q[Youre a pancake pal!,pchead]\n/"
+				}
+				/*else
+				{
+					"\n/"
+				}*/
+				--
+				"\![*]\q[Do you like me?,welldoyou]\n/
+				\![*]\q[Initialize,variables1]\n/
+				\![*]\q[Give me cactus friend. (For devs.),cactusfriend]\n/
 				//\![*]\q[Levels,testlevels]\n/
 				\![*]\q[Item menu,ritems]\n\n/
 				//\![*]\q[Test variable,testvariable]\n\n/
@@ -807,9 +818,8 @@ OpenKeroMenu
 				\![*]\q[Update,keroupdatecheck]\n/
 				\![*]\q[Bug report,bugreport]\n/
 				\![*]\q[Don't you like me?,welldoyou]\n/
+				\![*]\q[Initialize,variables1]\n/
 				\![*]\q[Do you want something?,ritems]\n\n/
-				\![*]\q[Test variable,testvariable]\n\n/
-				//\![*]\q[Test variable,testvariable]\n\n/
 				\![*]\q[Done.,keroCANCEL]\n\n\n/
 				%(friendlylevel)\e"
 			}
@@ -823,6 +833,7 @@ OpenKeroMenu
 				\![*]\q[Update,keroupdatecheck]\n/
 				\![*]\q[Bug report,bugreport]\n/
 				\![*]\q[You like me... right?,welldoyou]\n/
+				\![*]\q[Initialize,variables1]\n/
 				\![*]\q[Take this.,ritems]\n\n/
 				//\![*]\q[Test variable,testvariable]\n\n/
 				\![*]\q[I'm done.,keroCANCEL]\n\n\n/
@@ -831,8 +842,8 @@ OpenKeroMenu
 	 }
 }
 
-//There are no real set things for the second character to do, really. You can mostly add whatever functions you want to them, their menu is totally free reign. In mine for example, Hunter has some games, a pseudo-FAQ for users, a bug report, an update option, and most importantly, a test variable. A lot of that is fairly complicated though, so I won't get into it here. Advanced Users can pick up Hunter and Smoker and study their menu.dic to see how I did it though, and those who read the coding page of the walkthrough and want to make their own functions can feel free to add them here. 
-//For the purposes of this simple template, I'll include two options that may come in handy - an update option and a bug report option, as well as the test variable.
+//There are no real set things for the second character to do, really. You can mostly add whatever functions you want to them, their menu is totally free reign. In mine for example, Hunter has some games, a pseudo-FAQ for users, a bug %(ten), an update option, and most importantly, a test variable. A lot of that is fairly complicated though, so I won't get into it here. Advanced Users can pick up Hunter and Smoker and study their menu.dic to see how I did it though, and those who read the coding page of the walkthrough and want to make their own functions can feel free to add them here. 
+//For the purposes of this simple template, I'll include two options that may come in handy - an update option and a bug %(ten) option, as well as the test variable.
 
 //If you click cancel. Replace dialogue as you want.
 Select.keroCANCEL
@@ -840,7 +851,7 @@ Select.keroCANCEL
 	{
 		if friendlylevel >= 50
 		{
-			"\1\s[10]Ok.\e"
+			"\1%(ten)Ok.\e"
 		}
 		elseif friendlylevel >=20
 		{
@@ -860,7 +871,7 @@ Select.bugreport
 	{
 		if friendlylevel >= 20
 		{
-			"\1\s[10]Have bug-type things? \w5Tell them to...\w3 smokycinnamonroll on, uh\w3.. tumblr?\n\w4You and your internet things.\n\n \w5We were downloaded from \_a[https://github.com/SmokyCinnamon/rocky_noteworthy]this internet thing\_a.\e"
+			"\1%(ten)Have bug-type things? \w5Tell them to...\w3 smokycinnamonroll on, uh\w3.. tumblr?\n\w4You and your internet things.\n\n \w5We were downloaded from \_a[https://github.com/SmokyCinnamon/rocky_noteworthy]this internet thing\_a.\e"
 		}
 		else
 		{
@@ -872,7 +883,7 @@ Select.bugreport
 //When clicked, this will automatically tell the ghost to check for updates. More detail on updates in etc.dic. You can leave this alone.
 Select.keroupdatecheck
 {
-	"\1\s[10]\![updatebymyself]\e"
+	"\1%(ten)\![updatebymyself]\e"
 }
 Select.welldoyou
 {
@@ -894,15 +905,15 @@ Select.welldoyou
 	}
 	else
 	{
-		"\1\s[10]Well, sure. \1\s[31]Why wouldn't I?%(rendmenu)\e"
+		"\1%(ten)Well, sure. \1\s[31]Why wouldn't I?%(rendmenu)\e"
 	}
 }
 	
 Select.ritems
 {
-	//"\1\s[10]This isn't done yet\e"
+	//"\1%(ten)This isn't done yet\e"
 	
-	"\1\s[10]\n/
+	"\1%(ten)\n/
 	//\![*]\q_[Minus 50,minusfifty]\n/
 	//\![*]\q_[Plus 50,plusfifty]\n/
 	\![*]\q[Pancakes,pancaketime]\n/
@@ -911,22 +922,31 @@ Select.ritems
 /*Select.minusfifty
 {
 	friendlylevel -= 50
-	"\1\s[10]Minus 50\n/
+	"\1%(ten)Minus 50\n/
 	\![*]\q[I'm done,keroCANCEL]\n/
 	\![*]\q[Something else?,ritems]\e"
 }
 Select.plusfifty
 {
 	friendlylevel += 50
-	"\1\s[10]Plus 50\n/
+	"\1%(ten)Plus 50\n/
 	\![*]\q[I'm done,keroCANCEL]\n/
 	\![*]\q[Something else?,ritems]\e"
 }*/
 
 Select.pancaketime
 {
-	friendlylevel += 5
-	"\1\s[15]\_qOh, thank you!%(ritemend)\e"
+	if RAND(100) > 95 
+	{
+		pancaketime = "on"
+		friendlylevel += 10
+		"\1\s[15]I'm your pancake pal now, %(username)!!!\w6\n\1\s[12]What about you\w4, Noteworthy?%(ritemend)\e"
+	}
+	else
+	{
+		friendlylevel += 5
+		"\1\s[15]\_qOh, thank you!%(ritemend)\e"
+	}
 }
 
 Select.spacecoffee
@@ -941,20 +961,110 @@ Select.keromenu
 	OpenKeroMenu
 }
 
-/*Select.testlevels
+Select.testlevels
 {
-	"\1\s[10]Friend levels are %(friendlylevel) ().\e"
+	"\1%(ten)Friend levels are %(friendlylevel) ().\nPetted Rocky is %(pettedrocky).\nSeen cactus is %(seencactus).\nUncomfortable is %(uncomfortableroark).\n%(rendmenu)\e"
 }
-	*/
 
 //--Test Variable --------------------------------------------------------
 //I briefly mentioned the test variable in bootend.dic and possibly in etc.dic as well, I'm not sure. What exactly is the test variable? Basically, it's a place you can plug in anything you want to test out. What this means is that you can write some ghost dialogue, then copy and paste it into the test variable dialogue snippet down there, reload your ghost, then choose "test variable" from your second character's menu. Check your dialogue to see if it looks right and if it does, put it back in aitalk, or edit it until it looks right and put it back. While you can use Script Input to test most of your ghost's dialogue, there are some lines it just can't do, and it can't help you test choices. But the test variable can! The dialogue/choices from OnFirstBoot are a prime candidate for testing with this variable.
 //You can also use this to test functions as I mentioned above by adding \![raise,function] at the end of it, although you can do this with Script Input as well. Advanced Users, the test variable is also great for testing out any new stuff you may add to your ghost, like mode settings, item values, functions, raising or lowering numbers, what have you.
 
 //It is ALWAYS A GOOD IDEA to test your dialogue! If you won't check it with the test variable, at least test it with Script Input! It'll save you so much trouble!
-
-/*Select.testvariable
+Select.pchead
 {
-	askedstim = 0
-	"\1 asked stim is %(askedstim).\e"
-}*/
+	OnPancakehead
+}
+
+Select.variables1
+{
+	"\1\s[32]Are you sure? This might add some cool things, but might also break it.\nif new things have been added, others might be reset.\nOr...\n/
+	\![*]\q[You want to check the levels. (For devs.),testlevels]\n/
+	\![*]\q[Give me cactus friend. (For devs.),cactusfriend]\n/
+	\![*]\q[You're testing?,testvariable]\n/
+	\![*]\q[You're actually sure about this.,variables2]\n%(rendmenu)\e"
+}
+
+Select.cactusfriend
+{
+	seencactus = 1
+	"\p[3]\s[50]Hueargh%(rendmenu)\e"
+}
+
+Select.variables2
+{
+	{
+		if pettedrocky >= 0 && seencactus >= 0 && uncomfortableroark >= 0
+		{
+			"\1%(ten)Your variables are good! %(pettedrocky), %(seencactus), %(uncomfortableroark).%(rendmenu)\e"
+		}
+		else
+		{
+			pettedrocky = 0
+			seencactus = 0
+			uncomfortableroark = 0
+			"\1%(ten)One is %(pettedrocky), two is %(seencactus), three is %(uncomfortableroark).%(rendmenu)\e"
+		}
+	}
+}
+	
+Select.testvariable
+{
+	"\1%(ten)\![*]\q[screenshake,shaky]%(rendmenu)\e"
+}
+Select.shaky
+{
+	OnShake
+}
+
+OpenCactusMenu
+{
+	{
+		if friendlylevel >= 500
+		{
+			"\p3\s[50]\b[2]"
+			--
+			"\f[italic,true](This cactus... this cactus is your best friend.)\f[italic,false]"
+			"\f[italic,true](You love this cactus.)\f[italic,false]"
+			"\f[italic,true](This cactus will never leave you.\nNever.)\f[italic,false]"
+			"\f[italic,true](A hueargh of affection is heard.)\f[italic,false]"
+			"\f[italic,true](Your one true friend in this cold, hard world.)\f[italic,false]"
+			"\f[italic,true](Loved despite the spines, you feel as though it returns you affections.)\f[italic,false]"
+			"\f[italic,true](Your best friend.)\f[italic,false]"
+			--
+			"\n\n[half]/
+				\![*]\q[Ask about...,cactask]\n/
+				\![*]\q[Nothing,donecactus]\n\n\e"
+		}
+		else
+		{
+			"\p3\s[50]\b[2]"
+			--
+			"\f[italic,true](It stares.)\f[italic,false]"
+			"\f[italic,true](You'd prefer just the terracotta, thanks.)\f[italic,false]"
+			"Hueargh."
+			--
+			"\n\n[half]/
+				\![*]\q[Ask about...,cactask]\n/
+				\![*]\q[Nothing,donecactus]\n\n\e"
+		}
+	}
+}
+
+Select.donecactus
+{
+	"\p3\s[50]Hueargh\e"
+}
+
+Select.cactask
+{
+	{
+		if friendlylevel >= 500
+		{
+			"\p3\s[50](You ask if it would like a different ribbon. There is no reply.)\e"
+		}
+		else
+		{
+			"\p3\s[50](There's nothing to ask about, really.)\n(It's a cactus.)\n(What did you expect?)\e"
+		}
+	}

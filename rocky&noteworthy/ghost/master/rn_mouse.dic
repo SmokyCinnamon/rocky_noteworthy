@@ -20,6 +20,10 @@ OnMouseMove
 			//---- it will run the mouse functions for that character
 			MouseMoveSakura
 		}
+		elseif reference3 == 3 //p[3]?
+		{
+			MouseMoveCactus
+		}
 		else //if the character isn't 0, then it must be the side character.
 		{
 			//---- this will run the mouse functions for the side character.
@@ -150,8 +154,11 @@ MouseMoveKero
 			stroke = 0
 			if reference4 == "Face"
 			{
+				uncomfortableroark += 1
+				
 				if friendlylevel >= 200
 				{
+					friendlylevel -= 3
 					"\1\s[32]Hmmm...\e"
 				}
 				else
@@ -170,6 +177,8 @@ MouseMoveKero
 			}
 			elseif reference4 == "Head"
 				{
+					pettedrocky += 1
+					
 					if friendlylevel >= 200
 					{
 						"\1\s[32]Hmn...\e"
@@ -192,6 +201,29 @@ MouseMoveKero
  	}
 }
 
+MouseMoveCactus
+{
+if reference4 != "" //ignore
+ 	{
+ 		stroke++
+ 		if stroke >= 20
+		{
+			stroke = 0
+			if reference4 == "Cactus" 
+ 			{
+				"\p[3]\s[50]hueargh\n\n\f[italic,true](...\w4Ouch.)\f[italic,false]\e"
+			}
+			elseif reference4 == "Pot"
+			{
+				"\p[3]\s[50]\f[italic,true]You stroke the cool terracotta.\f[italic,false]\e"
+			}
+		}
+	}
+	else
+	{
+		stroke = 0
+	}
+}
 //---- OnMouseDoubleClick -------------------------------------------------------
 //This is set up much like OnMouseMove above, except this is checking to see if the user is double clicking on the ghost. You also don't need to touch any of this. 
 //Advanced users adding a third character, the same principles from OnMouseMove apply here as well! Make sure to add an elseif with the right number for your third character.
@@ -204,6 +236,10 @@ OnMouseDoubleClick
 	{
 		MouseDoubleClickSakura
  	}
+	elseif reference3 == 3
+	{
+		MouseDoubleClickCactus
+	}
 	else
  	{
  		MouseDoubleClickKero
@@ -320,13 +356,29 @@ MouseDoubleClickKero
 	}
  }
  
+ MouseDoubleClickCactus
+ {
+	 if reference4 == "Cactus"
+	 {
+		 "\p[3]\s[50]\f[italic,true](Spines.\w4 Spines in your hand.\w4\nOuch.)\e"
+	 }
+	 elseif reference4 == "Pot"
+	 {
+		 "\p[3]\s[50]\f[italic,true]You want to break it? Huh? You want to set this thing loose on your computer?\f[italic,false]\e"
+	 }
+	 else
+	 {
+		 OpenCactusMenu
+	 }
+ }
+ 
  OnMouseEnter
  {
- /*if reference3 == 0
+ if reference3 == 3
  {
-	MouseEnterSakura
+	MouseEnterCactus
  }
- else*/
+ else
  {
 	MouseEnterKero
  }
@@ -340,7 +392,19 @@ MouseDoubleClickKero
 	}
 }*/
 
-/*MouseEnterKero
+/*MouseEnterCactus
+{
+	if reference4 == "Cactus"
+	{
+		"\p[3]\s[50]Hueargh\e"
+	}
+	else
+	{
+		"\p[3]\s[50]\f[italic,true]We could make a pot joke, but we won't.\f[italic,false]\e"
+	}
+}
+
+MouseEnterKero
 {
 	if reference4 == "Head"
 	{

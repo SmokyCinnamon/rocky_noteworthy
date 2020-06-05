@@ -7,9 +7,8 @@
 
 exampleenvelope
 {
-	"Example Envelope Dialogue 1"
-	"Example Envelope Dialogue 2"
-	"Example Envelope Dialogue 3"
+	"she"
+	"they"
 }
 
 //As you can see, we stated a word, opened some brackets, wrote some text, and closed the brackets. Now when you write ghost dialogue, you can write %(exampleenvelope) and your ghost will randomly display any of the three bits of text within the brackets! You can go ahead and test this yourself to see how it works, and I'll include some sample dialogue with this in aitalk.dic.
@@ -140,7 +139,209 @@ blanklistparagraph
 {
 	"List paragraph 1"; "List paragraph 2"; "List paragraph 3"; "List paragraph 4"; "List paragraph 5";
 }
-
+pancakepals
+{
+	if pancaketime == "on"
+	{
+		"\i[60]"
+	}
+}
+// pancake surfaces
+ten
+{
+	{
+	if pancaketime == "on"
+	{
+		"\s[70]"
+	}
+	else
+	{
+		"\s[10]"
+	}
+	}
+}
+/*11
+{
+	{
+	if pancaketime == "on"
+	{
+		"\s[71]"
+	}
+	else
+	{
+		"\s[11]"
+	}
+	}
+}
+12
+{
+	{
+	if pancaketime == "on"
+	{
+		"\s[72]"
+	}
+	else
+	{
+		"\s[12]"
+	}
+	}
+}
+13
+{
+	{
+	if pancaketime == "on"
+	{
+		"\s[73]"
+	}
+	else
+	{
+		"\s[13]"
+	}
+	}
+}
+14
+{
+	{
+	if pancaketime == "on"
+	{
+		"\s[74]"
+	}
+	else
+	{
+		"\s[14]"
+	}
+	}
+}
+15
+{
+	{
+	if pancaketime == "on"
+	{
+		"\s[75]"
+	}
+	else
+	{
+		"\s[15]"
+	}
+	}
+}
+16
+{
+	{
+	if pancaketime == "on"
+	{
+		"\s[76]"
+	}
+	else
+	{
+		"\s[16]"
+	}
+	}
+}
+17
+{
+	{
+	if pancaketime == "on"
+	{
+		"\s[77]"
+	}
+	else
+	{
+		"\s[17]"
+	}
+	}
+}
+18
+{
+	{
+	if pancaketime == "on"
+	{
+		"\s[78]"
+	}
+	else
+	{
+		"\s[18]"
+	}
+	}
+}
+19
+{
+	{
+	if pancaketime == "on"
+	{
+		"\s[79]"
+	}
+	else
+	{
+		"\s[19]"
+	}
+	}
+}
+30
+{
+	{
+	if pancaketime == "on"
+	{
+		"\s[90]"
+	}
+	else
+	{
+		"\s[30]"
+	}
+	}
+}
+31
+{
+	{
+	if pancaketime == "on"
+	{
+		"\s[91]"
+	}
+	else
+	{
+		"\s[31]"
+	}
+	}
+}
+32
+{
+	{
+	if pancaketime == "on"
+	{
+		"\s[92]"
+	}
+	else
+	{
+		"\s[32]"
+	}
+	}
+}
+33
+{
+	{
+	if pancaketime == "on"
+	{
+		"\s[93]"
+	}
+	else
+	{
+		"\s[33]"
+	}
+	}
+}
+34
+{
+	{
+	if pancaketime == "on"
+	{
+		"\s[94]"
+	}
+	else
+	{
+		"\s[34]"
+	}
+	}
+}*/
 
  //**** Don't touch this ***************************************************************
  //This is code stuff and nothing for you to worry about, just save the .dic and move on! You're done!

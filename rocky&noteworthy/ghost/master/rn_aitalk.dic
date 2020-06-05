@@ -55,25 +55,25 @@ RandomTalk : nonoverlap
 	{
 		"\0\s[0]I have a cat back home, \w4did you know? \w4Her name is Beans. \w4\s[6]She's adorable.\e"
 		
-		"\1\s[10]Do you wanna be pancake pals?\e"
+		"\1%(ten)Do you wanna be pancake pals?\e"
 		
-		"\1\s[10]So Noteworthy, do you have a cactus friend?\w8\0\s[2]I-\w6\nA \w4\s[8]\f[italic,true]what\f[italic,false]?\w6\1\s[13]\n\n[half]A cactus friend.\e"
+		"\1%(ten)So Noteworthy, do you have a cactus friend?\w8\0\s[2]I-\w6\nA \w4\s[8]\f[italic,true]what\f[italic,false]?\w6\1\s[13]\n\n[half]A cactus friend.\e"
 		
 		"\1\s[15]How are you on this fine pancake-filled day?\e"
 		
-		"\1\s[10]Old man river!\n That seems far too austere a name / for something made of mirth and rage.\n O, roiling red-blood river vein,\n if cheif among your traits is age,\n you're a wily, convoluted sage.\n Is ''old'' the thing to call what rings / the vernal heart of wester-lore:\n / what brings us brassy myth-made kings... \n(And preponderance of bug-type things) \nTo challenge titans come before?\n Demiurge to a try at avalon-once-more!\n And what august vitality / in your wide aorta stream / you must have had to oversee / alchemic change of timber beam / to iron, brick and engine steam!\n Your umber whiskey waters lance / the prideful, sober sovereignty / of faulty-haloed temperance / and wilt her self-sure countenance:\n Yes, rightousness is vanity,\n but your sport's for imps, not elderly.\n So if there's a name for migrant mass / of veteran frivolity / that snakes through seas of prairie grass / and groves of sumer sassafras...\n A name that flows as rougishly / as gypsy waters, fast and free...\n\n it's your real name,\n mississippi.\e"
+		"\1%(ten)Old man river!\n That seems far too austere a name / for something made of mirth and rage.\n O, roiling red-blood river vein,\n if cheif among your traits is age,\n you're a wily, convoluted sage.\n Is ''old'' the thing to call what rings / the vernal heart of wester-lore:\n / what brings us brassy myth-made kings... \n(And preponderance of bug-type things) \nTo challenge titans come before?\n Demiurge to a try at avalon-once-more!\n And what august vitality / in your wide aorta stream / you must have had to oversee / alchemic change of timber beam / to iron, brick and engine steam!\n Your umber whiskey waters lance / the prideful, sober sovereignty / of faulty-haloed temperance / and wilt her self-sure countenance:\n Yes, rightousness is vanity,\n but your sport's for imps, not elderly.\n So if there's a name for migrant mass / of veteran frivolity / that snakes through seas of prairie grass / and groves of sumer sassafras...\n A name that flows as rougishly / as gypsy waters, fast and free...\n\n it's your real name,\n mississippi.\e"
 		
 		"\1\s[15]\f[italic,true]Pancake pals,\w3 pan\w3cake\w2 pals...\e"
 		
-		"\1\s[10]Anything I can do for you, %(username)?\e"
+		"\1%(ten)Anything I can do for you, %(username)?\e"
 		
-		"\1\s[10]Could I get some pancakes? Extra syrup?\e"
+		"\1%(ten)Could I get some pancakes? Extra syrup?\e"
 		
-		"\1\s[10]Pancake pals...\e"
+		"\1%(ten)Pancake pals...\e"
 		
-		"\1\s[10]Pancakes are good for updates.\e"
+		"\1%(ten)Pancakes are good for updates.\e"
 		
-		"\1\s[10]Working on anything, %(username)?\w3\n...\w2Can I see?\e"
+		"\1%(ten)Working on anything, %(username)?\w3\n...\w2Can I see?\e"
 		
 		"\1\s[18]I wonder if there's a limit to the amount of syrup you can put on pancakes...\e"
 		
@@ -81,11 +81,11 @@ RandomTalk : nonoverlap
 		
 		"\1\s[18]I wonder if %(username) likes hugs...\e"
 		
-		"\1\s[18]You don't like waffles, do you?\n\1\s[10]Geometric breakfast grids just can't compare to pancakes.\e"
+		"\1\s[18]You don't like waffles, do you?\n\1%(ten)Geometric breakfast grids just can't compare to pancakes.\e"
 		
-		"\1\s[10]...I do still want to know where we are.\e"
+		"\1%(ten)...I do still want to know where we are.\e"
 		
-		"\1\s[17]What might there be to behold, out where %(username) is? Surely skies and stars, just like my heart still lives...\w3\n\n\w4\1\s[10]Hum, maybe not...\e"
+		"\1\s[17]What might there be to behold, out where %(username) is? Surely skies and stars, just like my heart still lives...\w3\n\n\w4\1%(ten)Hum, maybe not...\e"
 		
 		"\0\s[5]....!\n(Her bones are rattling. \w4it's a happy sound.)\e"
 		
@@ -104,31 +104,33 @@ RandomTalk : nonoverlap
 		
 		"\0\s[0]What are you working on, %(username)? \w4Any neat projects?\e"
 		
-		"\1\s[10]Old mans river... \w5\nHe is very funny. \w5\nAnd very famous for his anger. \w6\nHave the titans challenged you before??? \w6\nforget about an abalon expeirience anymore. \w5\nA pod of red blood! \w6\none of the hallmarks of your appearance / is that you are a smart and sophisticated MAN! \w6\n...the old voice / that comes out of / the heart of hte west. \w6\nIs the masses... and the appearance of insects. \w4\nof myths. \w6\niron\w4 / and iron / the same power you get from the cats. \w6\nWide aortic flow is \f[italic,true]very\f[italic,false] important for / converting wood to brick and steam. \w6\nYour roasted vulture is the pride of a rebelious spirit! \w6\nWe want to be careful\w4 / it shows with confidence. \w5\nYes, justice is trivial\w6 / SO if there is a name for unsuspecting migrants who roam the edges of sassafra...\w4 and the ashes of asia...\w4 the name is probably as fast and free as gypsy water..your name... \w6\n\nis lover.\w8\w4\e"
+		"\1%(ten)Old mans river... \w5\nHe is very funny. \w5\nAnd very famous for his anger. \w6\nHave the titans challenged you before??? \w6\nforget about an abalon expeirience anymore. \w5\nA pod of red blood! \w6\none of the hallmarks of your appearance / is that you are a smart and sophisticated MAN! \w6\n...the old voice / that comes out of / the heart of hte west. \w6\nIs the masses... and the appearance of insects. \w4\nof myths. \w6\niron\w4 / and iron / the same power you get from the cats. \w6\nWide aortic flow is \f[italic,true]very\f[italic,false] important for / converting wood to brick and steam. \w6\nYour roasted vulture is the pride of a rebelious spirit! \w6\nWe want to be careful\w4 / it shows with confidence. \w5\nYes, justice is trivial\w6 / SO if there is a name for unsuspecting migrants who roam the edges of sassafra...\w4 and the ashes of asia...\w4 the name is probably as fast and free as gypsy water..your name... \w6\n\nis lover.\w8\w4\e"
 		
-		"\1\s[17]Likely to be unfounded, found-dead upturned to face down...ded?\1\s[10]\n\nIt's a work in progress, anyways.\e"
+		"\1\s[17]Likely to be unfounded, found-dead upturned to face down...ded?\1%(ten)\n\nIt's a work in progress, anyways.\e"
 		
-		"\1\s[10]I guess it's alright here, wherever here may be.\e"
+		"\1%(ten)I guess it's alright here, wherever here may be.\e"
 		
-		"\1\s[10]I still want to know how %(username) got me here. Any ideas how %(heshe) did it? \w8\0\s[8]A couple theories,\w4 but mostly dumb ones.\w4 I'd have to ask my dad and my uncle.\w8 They might know.\e"
+		"\1%(ten)I still want to know how %(username) got me here. Any ideas how %(heshe) did it? \w8\0\s[8]A couple theories,\w4 but mostly dumb ones.\w4 I'd have to ask my dad and my uncle.\w8 They might know.\e"
 
-		"\1\s[10]Too bad my violin didn't make the trip here.\w4\1\s[31]Then I could play something for you, %(username)!\e"
+		"\1%(ten)Too bad my violin didn't make the trip here.\w4\1\s[31]Then I could play something for you, %(username)!\e"
 		
-		"\1\s[10]How's it going? I'm great, thanks for asking.\e"
+		"\1%(ten)How's it going? I'm great, thanks for asking.\e"
 		
-		"\1\s[10]If only I had my violin\w4 I might be able to show you the un-matched skill I have!\e"
+		"\1%(ten)If only I had my violin\w4 I might be able to show you the un-matched skill I have!\e"
 		
-		"\1\s[10]So, Noteworthy, how does a skeleton go about walking, anyways? \1\s[31]Especially with such illuminating eye-lights you seem to have. \w8\0\s[8]Well I'm not actually dead, that's a common misconception. \w4\s[0]I'm just your average monster, \s[6]\f[italic,true]sans\f[italic,false] \w8\s[0]the flesh and other squishy bits. \w6So like whatever-percent more magic to make up for it. \w4The eyelights depend on the skeleton though, honestly. \w4.\w4.\w4.\w6\s[2]OH YEAH \s[6]we also see what you're saying in font! \w4\s[8]Which honestly the fact that other monsters and humans can't is weird to me.\e"
+		"\1%(ten)So, Noteworthy, how does a skeleton go about walking, anyways? \1\s[31]Especially with such illuminating eye-lights you seem to have. \w8\0\s[8]Well I'm not actually dead, that's a common misconception. \w4\s[0]I'm just your average monster, \s[6]\f[italic,true]sans\f[italic,false] \w8\s[0]the flesh and other squishy bits. \w6So like whatever-percent more magic to make up for it. \w4The eyelights depend on the skeleton though, honestly. \w4.\w4.\w4.\w6\s[2]OH YEAH \s[6]we also see what you're saying in font! \w4\s[8]Which honestly the fact that other monsters and humans can't is weird to me.\e"
 		
-		"\1\s[10]Noteworthy, do \f[italic,true]you\f[italic,false] like waffles? \0\s[0]I do, yeah. Especially if you put ice cream on 'em, \f[italic,true]yum.\f[italic,false] Why?\w6\1\s[31]No reason.\e"
+		"\1%(ten)Noteworthy, do \f[italic,true]you\f[italic,false] like waffles? \0\s[0]I do, yeah. Especially if you put ice cream on 'em, \f[italic,true]yum.\f[italic,false] Why?\w6\1\s[31]No reason.\e"
 
-		"\1\s[10]Hello!\e"
+		"\1%(ten)Hello!\e"
 		
-		"\1\s[10]Hi.\w5\n\nI'm dying a slow death of pancake-deprivation.\e"
+		"\1%(ten)Hi.\w5\n\nI'm dying a slow death of pancake-deprivation.\e"
 		
 		"\0\s[8]Y'know, I kinda wish I'd brought a book or something with me...\e"
 		
 		"\0\s[0]Talking! \w4Yes! \w4This is a thing that I am good at, \w4and make use of on a daily basis!\e"
+		
+		"\p[3]\s[50]hueargh\e"
 	}
 	elseif friendlylevel >= 20 //less than enthused
 	{
@@ -171,7 +173,7 @@ RandomTalk : nonoverlap
 		"\1\s[31]In general, it's better to be hospitable, right, %(username)? I've always thought so.\e"
 		
 		--
-		"\1\s[17]You look nice, %(username). \1\s[31]"
+		"\1\s[17]You look nice, %(username). \1%(31)"
 		--
 		if pluralpro == "true" 
 		{
@@ -233,11 +235,11 @@ RandomTalk : nonoverlap
 	
 	//Here is what a simple two line exchange between your characters might look like. Either character can start a piece of dialogue, it doesn't always have to be the main one.
 	
-	"\0\s[0]This is a three-step piece of dialogue.\w8\1\s[10]Here is the response.\w8\0\s[0]\n\n[half]Here is the third step.\e"
+	"\0\s[0]This is a three-step piece of dialogue.\w8\1%(ten)Here is the response.\w8\0\s[0]\n\n[half]Here is the third step.\e"
 	
 	//Note here that the code comes back to character 0 and spaces out their second statement with \n\n[half]. This makes it so the next line of dialogue from them is spaced properly in the balloon. Always make sure to add \n\n[half] when a character says more than one thing in a conversation like this. 
 	
-	"\0\s[0]This is a long piece of dialogue.\w8\1\s[10]This is my first response.\w8\0\s[0]\n\n[half]This is my response to that.\w8\1\s[10]\n\n[half]This is my second response.\w8\0\s[0]\n\n[half]And this is my last response.\w8\1\s[10]\n\n[half]This is my final word.\e"
+	"\0\s[0]This is a long piece of dialogue.\w8\1%(ten)This is my first response.\w8\0\s[0]\n\n[half]This is my response to that.\w8\1%(ten)\n\n[half]This is my second response.\w8\0\s[0]\n\n[half]And this is my last response.\w8\1%(ten)\n\n[half]This is my final word.\e"
 	
 	//As you can see, you can extend a conversation as long as you want by remembering to space things with \n\n[half].
 	
@@ -261,40 +263,40 @@ RandomTalk : nonoverlap
 	
 	//You can also pause multiple times within sentences, like so. At the end, you can pause between letters if your ghost is spelling something.
 	
-	"\1\s[10]Here is dialogue on one line.\nHere is dialogue on the next line.\e"
+	"\1%(ten)Here is dialogue on one line.\nHere is dialogue on the next line.\e"
 	
 	//You can use \n to move dialogue down one line, like hitting enter once. 
 	
-	"\0\s[0]This is dialogue referring to %(username).\w8\1\s[10]Hello, %(username).\e"
+	"\0\s[0]This is dialogue referring to %(username).\w8\1%(ten)Hello, %(username).\e"
 	
 	//Here, the characters are using the %(username) envelope to use the user's name. More on envelopes in word.dic. You can use any envelope you want in dialogue, practically.
 	
-	"\1\s[10]Here is dialogue using %(username)'s pronouns.\w8\0\s[0]%(heshe) went to the store and got %(himher)self some milk for %(hisher) cat.\e"
+	"\1%(ten)Here is dialogue using %(username)'s pronouns.\w8\0\s[0]%(heshe) went to the store and got %(himher)self some milk for %(hisher) cat.\e"
 	
 	//You can use the pronouns set up during their first boot (see bootend.dic) or in the config menu (menu.dic) in sentences like this as well. You can see that the envelope %(heshe) replaces where he or she would be in the sentence, and so on for the rest of them. This makes it so they use the correct pronoun in the right place.
 	
-	"\1\s[10]Here we'll use the envelope 'exampleenvelope' to show what it looks like in a balloon.\w8\0\s[0]%(exampleenvelope).\e"
+	"\1%(ten)Here we'll use the envelope 'exampleenvelope' to show what it looks like in a balloon.\w8\0\s[0]%(exampleenvelope).\e"
 	
 	//As you can see, you can put any envelope from word.dic in here, as long as you properly format it as an envelope by putting a percent sign in front and putting it in parentheses. %(username), %(icecream), %(bunnies), whatever, this is up to you as long as you've defined it in word.dic. You can see how the values stored in the envelope appear in the balloon when the dialogue is called.
 	//Do note that you cannot put quotation marks in your dialogue. If you're using Notepad++ which you should be doing, you'll see the line break and turn black if you do. Use apostrophes instead.
 	
-	"\1\s[10]Here we'll use the envelope 'blanklist' to show what it looks like in a balloon.\w8\0\s[0]%(blanklist).\e"
+	"\1%(ten)Here we'll use the envelope 'blanklist' to show what it looks like in a balloon.\w8\0\s[0]%(blanklist).\e"
 	
-	"\1\s[10]Here we'll use the envelope 'blanklist2' to show what it looks like in a balloon.\w8\0\s[0]%(blanklist2).\e"
+	"\1%(ten)Here we'll use the envelope 'blanklist2' to show what it looks like in a balloon.\w8\0\s[0]%(blanklist2).\e"
 	
-	"\1\s[10]Here we'll use the envelope 'blanklist3' to show what it looks like in a balloon.\w8\0\s[0]%(blanklist3).\e"
+	"\1%(ten)Here we'll use the envelope 'blanklist3' to show what it looks like in a balloon.\w8\0\s[0]%(blanklist3).\e"
 	
 	//And here are more examples using the blanklists I set up in word.dic.
 	
-	"\1\s[10]Here we'll use the envelope 'usersfolder' to pretend to look at the user's files.\w8\0\s[0]Hey, have you looked at %(usersfolder) lately?\w8\1\s[19]\n\n[half]No.\e"
+	"\1%(ten)Here we'll use the envelope 'usersfolder' to pretend to look at the user's files.\w8\0\s[0]Hey, have you looked at %(usersfolder) lately?\w8\1\s[19]\n\n[half]No.\e"
 	
 	//You can use the usersfolder envelope creatively if you like, haha.
 	
-	"\1\s[10]Here we'll use the envelope 'internalenvelope' to show an envelop containing another envelope.\w8\0\s[0]%(internalenvelope).\e"
+	"\1%(ten)Here we'll use the envelope 'internalenvelope' to show an envelop containing another envelope.\w8\0\s[0]%(internalenvelope).\e"
 	
 	//Here's an example using the internal envelope I mentioned in word.dic.
 	
-	"\1\s[10]Here is dialogue referring to Anchor 1.\w8\0\s[0]Here is dialogue referring to Anchor 2 and Anchor 3.\e"
+	"\1%(ten)Here is dialogue referring to Anchor 1.\w8\0\s[0]Here is dialogue referring to Anchor 2 and Anchor 3.\e"
 	
 	//Anchor words are defined more in anchor.dic. Note here when you see this dialogue that Anchor 1, 2, and 3 become links when spoken, even if they weren't written as links in the dialogue in this file. This is why anchor words are convenient, you don't have to set up link code every time they say a certain word. Try clicking the links when they appear to see what they lead to. It'll give you an idea of exactly how anchors work.
 	*/
@@ -306,7 +308,7 @@ RandomTalk : nonoverlap
 	 if nowshell == "default_shell" //This checks to see what shell they're currently using. You may remember this value being defined back in bootend.dic. If they're in their default shell...
 	{
 	//Then these conversations are available! Note the brackets enclosing this set of dialogue.
-	"\0\s[0]Here is dialogue related to the default shell.\w8\1\s[10]You can use this to comment on clothing your ghost is wearing.\e"
+	"\0\s[0]Here is dialogue related to the default shell.\w8\1%(ten)You can use this to comment on clothing your ghost is wearing.\e"
 	
 	"\0\s[0]Here is more dialogue related to the default shell.\e"
 	}
@@ -320,9 +322,9 @@ RandomTalk : nonoverlap
 	}
 	//After the if statement is done, you can continue with dialogue as normal. As you can see, you can move the ifs around in here, it doesn't really matter. You may want to stick them all in one place together if you want to keep track of them, or you can scatter them around your dialogue as you please. It's up to you. These two lines below are just normal random dialogue.
 	
-	"\1\s[10]This is generic dialogue.\w8\0\s[0]This can be replaced with whatever you want.\e"
+	"\1%(ten)This is generic dialogue.\w8\0\s[0]This can be replaced with whatever you want.\e"
 	
-	"\1\s[10]This is more generic dialogue to be replaced.\w8\0\s[0]Do whatever you like with it.\e"
+	"\1%(ten)This is more generic dialogue to be replaced.\w8\0\s[0]Do whatever you like with it.\e"
 	
 	//And here we're going to go back into ifs! You see, you can space out your ifs with normal dialogue if you want, as I just mentioned. Anyway, you can set up if statements to check for a lot of different things! One of the cooler ones I think are ones set to check for time. This one for example checks if the month is December.
 	
@@ -338,155 +340,155 @@ RandomTalk : nonoverlap
 	
 	if month == 1
 	{
-		"\0\s[0]This is dialogue for January.\w8\1\s[10]Yup.\e"
+		"\0\s[0]This is dialogue for January.\w8\1%(ten)Yup.\e"
 		
-		"\0\s[0]This is more dialogue for January.\w8\1\s[10]That it is.\e"
+		"\0\s[0]This is more dialogue for January.\w8\1%(ten)That it is.\e"
 	}
 	if month == 2
 	{
-		"\0\s[0]This is dialogue for February.\w8\1\s[10]Yup.\e"
+		"\0\s[0]This is dialogue for February.\w8\1%(ten)Yup.\e"
 		
-		"\0\s[0]This is more dialogue for February.\w8\1\s[10]That it is.\e"
+		"\0\s[0]This is more dialogue for February.\w8\1%(ten)That it is.\e"
 	}
 	if month == 3
 	{
-		"\0\s[0]This is dialogue for March.\w8\1\s[10]Yup.\e"
+		"\0\s[0]This is dialogue for March.\w8\1%(ten)Yup.\e"
 		
-		"\0\s[0]This is more dialogue for March.\w8\1\s[10]That it is.\e"
+		"\0\s[0]This is more dialogue for March.\w8\1%(ten)That it is.\e"
 	}
 	if month == 4
 	{
-		"\0\s[0]This is dialogue for April.\w8\1\s[10]Yup.\e"
+		"\0\s[0]This is dialogue for April.\w8\1%(ten)Yup.\e"
 		
-		"\0\s[0]This is more dialogue for April.\w8\1\s[10]That it is.\e"
+		"\0\s[0]This is more dialogue for April.\w8\1%(ten)That it is.\e"
 	}
 	if month == 5
 	{
-		"\0\s[0]This is dialogue for May.\w8\1\s[10]Yup.\e"
+		"\0\s[0]This is dialogue for May.\w8\1%(ten)Yup.\e"
 		
-		"\0\s[0]This is more dialogue for May.\w8\1\s[10]That it is.\e"
+		"\0\s[0]This is more dialogue for May.\w8\1%(ten)That it is.\e"
 	}
 	if month == 6
 	{
-		"\0\s[0]This is dialogue for June.\w8\1\s[10]Yup.\e"
+		"\0\s[0]This is dialogue for June.\w8\1%(ten)Yup.\e"
 		
-		"\0\s[0]This is more dialogue for June.\w8\1\s[10]That it is.\e"
+		"\0\s[0]This is more dialogue for June.\w8\1%(ten)That it is.\e"
 	}
 	if month == 7
 	{
-		"\0\s[0]This is dialogue for July.\w8\1\s[10]Yup.\e"
+		"\0\s[0]This is dialogue for July.\w8\1%(ten)Yup.\e"
 		
-		"\0\s[0]This is more dialogue for July.\w8\1\s[10]That it is.\e"
+		"\0\s[0]This is more dialogue for July.\w8\1%(ten)That it is.\e"
 	}
 	if month == 8
 	{
-		"\0\s[0]This is dialogue for August.\w8\1\s[10]Yup.\e"
+		"\0\s[0]This is dialogue for August.\w8\1%(ten)Yup.\e"
 		
-		"\0\s[0]This is more dialogue for August.\w8\1\s[10]That it is.\e"
+		"\0\s[0]This is more dialogue for August.\w8\1%(ten)That it is.\e"
 	}
 	if month == 9
 	{
-		"\0\s[0]This is dialogue for September.\w8\1\s[10]Yup.\e"
+		"\0\s[0]This is dialogue for September.\w8\1%(ten)Yup.\e"
 		
-		"\0\s[0]This is more dialogue for September.\w8\1\s[10]That it is.\e"
+		"\0\s[0]This is more dialogue for September.\w8\1%(ten)That it is.\e"
 	}
 	if month == 10
 	{
-		"\0\s[0]This is dialogue for October.\w8\1\s[10]Yup.\e"
+		"\0\s[0]This is dialogue for October.\w8\1%(ten)Yup.\e"
 		
-		"\0\s[0]This is more dialogue for October.\w8\1\s[10]That it is.\e"
+		"\0\s[0]This is more dialogue for October.\w8\1%(ten)That it is.\e"
 	}
 	if month == 11
 	{
-		"\0\s[0]This is dialogue for November.\w8\1\s[10]Yup.\e"
+		"\0\s[0]This is dialogue for November.\w8\1%(ten)Yup.\e"
 		
-		"\0\s[0]This is more dialogue for November.\w8\1\s[10]That it is.\e"
+		"\0\s[0]This is more dialogue for November.\w8\1%(ten)That it is.\e"
 	}
 	//These ifs check what day of the week it is.
 	if weekday == 1
 	{
-		"\0\s[0]This is dialogue for Monday.\w8\1\s[10]Yup.\e"
+		"\0\s[0]This is dialogue for Monday.\w8\1%(ten)Yup.\e"
 		
-		"\0\s[0]This is more dialogue for Monday.\w8\1\s[10]That it is.\e"
+		"\0\s[0]This is more dialogue for Monday.\w8\1%(ten)That it is.\e"
 	}
 	if weekday == 2
 	{
-		"\0\s[0]This is dialogue for Tuesday.\w8\1\s[10]Yup.\e"
+		"\0\s[0]This is dialogue for Tuesday.\w8\1%(ten)Yup.\e"
 		
-		"\0\s[0]This is more dialogue for Tuesday.\w8\1\s[10]That it is.\e"
+		"\0\s[0]This is more dialogue for Tuesday.\w8\1%(ten)That it is.\e"
 	}
 	if weekday == 3
 	{
-		"\0\s[0]This is dialogue for Wednesday.\w8\1\s[10]Yup.\e"
+		"\0\s[0]This is dialogue for Wednesday.\w8\1%(ten)Yup.\e"
 		
-		"\0\s[0]This is more dialogue for Wednesday.\w8\1\s[10]That it is.\e"
+		"\0\s[0]This is more dialogue for Wednesday.\w8\1%(ten)That it is.\e"
 	}
 	if weekday == 4
 	{
-		"\0\s[0]This is dialogue for Thursday.\w8\1\s[10]Yup.\e"
+		"\0\s[0]This is dialogue for Thursday.\w8\1%(ten)Yup.\e"
 		
-		"\0\s[0]This is more dialogue for Thursday.\w8\1\s[10]That it is.\e"
+		"\0\s[0]This is more dialogue for Thursday.\w8\1%(ten)That it is.\e"
 	}
 	if weekday == 5
 	{
-		"\0\s[0]This is dialogue for Friday.\w8\1\s[10]Yup.\e"
+		"\0\s[0]This is dialogue for Friday.\w8\1%(ten)Yup.\e"
 		
-		"\0\s[0]This is more dialogue for Friday.\w8\1\s[10]That it is.\e"
+		"\0\s[0]This is more dialogue for Friday.\w8\1%(ten)That it is.\e"
 	}
 	if weekday == 6
 	{
-		"\0\s[0]This is dialogue for Saturday.\w8\1\s[10]Yup.\e"
+		"\0\s[0]This is dialogue for Saturday.\w8\1%(ten)Yup.\e"
 		
-		"\0\s[0]This is more dialogue for Saturday.\w8\1\s[10]That it is.\e"
+		"\0\s[0]This is more dialogue for Saturday.\w8\1%(ten)That it is.\e"
 	}
 	if weekday == 7
 	{
-		"\0\s[0]This is dialogue for Sunday.\w8\1\s[10]Yup.\e"
+		"\0\s[0]This is dialogue for Sunday.\w8\1%(ten)Yup.\e"
 		
-		"\0\s[0]This is more dialogue for Sunday.\w8\1\s[10]That it is.\e"
+		"\0\s[0]This is more dialogue for Sunday.\w8\1%(ten)That it is.\e"
 	}
 	//These ifs check for the time of day as defined in bootend.dic. Do you remember the words used for each chunk of time in GetTimeSlot? These are the same words!
 	if timeslot == "earlymorning"
 	{
-		"\0\s[0]This is dialogue for the early morning.\w8\1\s[10]Yup.\e"
+		"\0\s[0]This is dialogue for the early morning.\w8\1%(ten)Yup.\e"
 		
-		"\0\s[0]This is more dialogue for early morning.\w8\1\s[10]That it is.\e"
+		"\0\s[0]This is more dialogue for early morning.\w8\1%(ten)That it is.\e"
 	}
 	if timeslot == "morning"
 	{
-		"\0\s[0]This is dialogue for the morning.\w8\1\s[10]Yup.\e"
+		"\0\s[0]This is dialogue for the morning.\w8\1%(ten)Yup.\e"
 		
-		"\0\s[0]This is more dialogue for the morning.\w8\1\s[10]That it is.\e"
+		"\0\s[0]This is more dialogue for the morning.\w8\1%(ten)That it is.\e"
 	}
 	if timeslot == "lunch"
 	{
-		"\0\s[0]This is dialogue for lunch time.\w8\1\s[10]Yup.\e"
+		"\0\s[0]This is dialogue for lunch time.\w8\1%(ten)Yup.\e"
 		
-		"\0\s[0]This is more dialogue for lunch time.\w8\1\s[10]That it is.\e"
+		"\0\s[0]This is more dialogue for lunch time.\w8\1%(ten)That it is.\e"
 	}
 	if timeslot == "afternoon"
 	{
-		"\0\s[0]This is dialogue for the afternoon.\w8\1\s[10]Yup.\e"
+		"\0\s[0]This is dialogue for the afternoon.\w8\1%(ten)Yup.\e"
 		
-		"\0\s[0]This is more dialogue for the afternoon.\w8\1\s[10]That it is.\e"
+		"\0\s[0]This is more dialogue for the afternoon.\w8\1%(ten)That it is.\e"
 	}
 	if timeslot == "evening"
 	{
-		"\0\s[0]This is dialogue for the evening.\w8\1\s[10]Yup.\e"
+		"\0\s[0]This is dialogue for the evening.\w8\1%(ten)Yup.\e"
 		
-		"\0\s[0]This is more dialogue for the evening.\w8\1\s[10]That it is.\e"
+		"\0\s[0]This is more dialogue for the evening.\w8\1%(ten)That it is.\e"
 	}
 	if timeslot == "latenight"
 	{
-		"\0\s[0]This is dialogue for the late night.\w8\1\s[10]Yup.\e"
+		"\0\s[0]This is dialogue for the late night.\w8\1%(ten)Yup.\e"
 		
-		"\0\s[0]This is more dialogue for the late night.\w8\1\s[10]That it is.\e"
+		"\0\s[0]This is more dialogue for the late night.\w8\1%(ten)That it is.\e"
 	}
 	if timeslot == "midnight"
 	{
-		"\0\s[0]This is dialogue for midnight.\w8\1\s[10]Yup.\e"
+		"\0\s[0]This is dialogue for midnight.\w8\1%(ten)Yup.\e"
 		
-		"\0\s[0]This is more dialogue for midnight.\w8\1\s[10]That it is.\e"
+		"\0\s[0]This is more dialogue for midnight.\w8\1%(ten)That it is.\e"
 	}
 	*/
 	
@@ -498,7 +500,7 @@ RandomTalk : nonoverlap
 	_korword = _korean[0] //The first part of the envelope's list is the Korean word, so it will be called _korword. The first value of the _korean list is _korean[0], so that value is then stored in _korword.
 	_kormean = _korean[1] //This is the second item on the list, in this case the meaning of the Korean word, so it's called _kormean. The second value of the _korean list is _korean[1], so that value is then stored in _kormean.
 	
-	"\1\s[10]Here is an example of a double envelope. The Korean word is %(_korword).\w8\0\s[0]The word means %(_kormean).\e"
+	"\1%(ten)Here is an example of a double envelope. The Korean word is %(_korword).\w8\0\s[0]The word means %(_kormean).\e"
 	
 	//As you can see here, you then use the values we set above for _korword and _kormean up there in the dialogue as our new envelopes. If you're planning on using a double envelope like this, study how this works very carefully! Most of the time, you can get away with just copying this whole bit of code and changing the names of the values as you need - doubled envelope to _doubled, _korword to _doubleitem1 or _kormean to _doubleitem2, or whatever. I'm not sure if the underscores are necessary, but you might as well play it safe and keep them.
 	//You could possibly set up an envelope with three or four or any number of values in it, then just assign them increasing numbers like _doubleitem[4] or _doubleitem[5] in the dialogue set up here, but I've personally never tried it.
@@ -515,7 +517,7 @@ RandomTalk : nonoverlap
 	
 	{ //Again, note the brackets around these unique bits of dialogue.
 	
-	"\0\s[0]I am asking you a generic question, Triangle. Generic question?\w8\1\s[10]"
+	"\0\s[0]I am asking you a generic question, Triangle. Generic question?\w8\1%(ten)"
 	//Notice that the last few tags set up Triangle's pose before going into his text below. You don't have to do this if you want each response to have its own pose, but if he'll have the same expression regardless of what he's saying, you might as well save yourself the work.
 	-- //You've probably seen these double dashes before in other .dic files. In this case, these dashes enclose a set of multiple responses.
 	"This is my first response."
@@ -540,7 +542,7 @@ RandomTalk : nonoverlap
 	//Here's another example of multiple responses. This one will let you randomly choose something to say in the middle of a sentence.
 	
 	{
-	"\0\s[0]Say either black or white.\w8\1\s[10]What if I say " 
+	"\0\s[0]Say either black or white.\w8\1%(ten)What if I say " 
 	-- //opening dashes
 	"green"
 	"red"
@@ -556,10 +558,10 @@ RandomTalk : nonoverlap
 	*/
 	
 	/*
-	"\0\s[0]\f[height,20]These words are really large.\f[height,default]\w8\1\s[10]These words are a normal size. \w8\f[height,6]These words are small.\f[height,default]\e"
+	"\0\s[0]\f[height,20]These words are really large.\f[height,default]\w8\1%(ten)These words are a normal size. \w8\f[height,6]These words are small.\f[height,default]\e"
 	
 	//You can use other fancier SakuraScript bits in your dialogue if you want to get font effects, although I won't get too much into them here. In this case, \f[height,20] changes the height of the font, in this case to 20 or to 6, and then \f[height,default] changes them back to normal. I touch more on this in the SakuraScript page of the walkthrough.
-	// "\0\s[0]\f[strike,true]These words are struck out.\f[strike,default]\w8\1\s[10]\f[sub,true]These words are a subscript.\f[sub,false] \f[sup,true]These words are a superscript.\f[sup,false] \f[underline,true]These words are underlined.\f[underline,default] \f[bold,true]These words are bold.\f[bold,false] \f[italic,true]These words are italic.\f[italic,false] \f[color,186,146,112]These words are a color.\f[color,default] This tag would return to default.\f[default]\e"
+	// "\0\s[0]\f[strike,true]These words are struck out.\f[strike,default]\w8\1%(ten)\f[sub,true]These words are a subscript.\f[sub,false] \f[sup,true]These words are a superscript.\f[sup,false] \f[underline,true]These words are underlined.\f[underline,default] \f[bold,true]These words are bold.\f[bold,false] \f[italic,true]These words are italic.\f[italic,false] \f[color,186,146,112]These words are a color.\f[color,default] This tag would return to default.\f[default]\e"
 	//Here's a list of similar tags you may find useful. You can see they function much like <b> or <i> tags in html. You just enclose the piece of text you want to change with them. Note that they start with \f[word,true] to turn it on, then \f[word,false] or \f[word,default] to turn it off. I assume you can tell what the tags do by the text they enclose.
 	//For the \f[color] tag, the three colors listed are the RGB values of the color you want to use for your text. Change them to whatever color you want to use. \f[default] can be an easy way to quickly go back to the default word setting in your balloon after messing with colors and effects a lot.
 	
@@ -574,11 +576,11 @@ RandomTalk : nonoverlap
 	//--Chains
 	//Chain dialogue is unique. A dialogue chain consists of multiple bits of dialogue that get called in order over a period of time.
 	
-	//"\0\s[0]This is the first part of a chained dialogue.\w8\1\s[10]Second part to come when we next speak.\e:chain=firstchain"
+	//"\0\s[0]This is the first part of a chained dialogue.\w8\1%(ten)Second part to come when we next speak.\e:chain=firstchain"
 	
 	//Note here that instead of ending the dialogue with the normal end tag of \e, it ends with \e:chain=firstchain. This will link down below to a chunk of code outside RandomTalk called firstchain. You can scroll down and find it now if you want. You can name your chain anything you want, it'd just follow the same format of \e:chain=yourchainsname, and you can have a long series of chains as well. Once a dialogue has entered a chain, they won't say any other random dialogue until the chain is finished.
 	
-	//"\0\s[0]This will lead to the second piece of chained dialogue.\w8\1\s[10]This will have another chain attached to it.\e:chain=secondchain"
+	//"\0\s[0]This will lead to the second piece of chained dialogue.\w8\1%(ten)This will have another chain attached to it.\e:chain=secondchain"
 	
 	//Here, this chain will link to another chain to continue the conversation. You can scroll down to the section on chains to see this in action.
 	//And so we reach the end of randomtalk! I again reiterate, YOU CAN AND SHOULD WRITE YOUR OWN NEW LINES OF DIALOGUE FOR THIS! I included some random example phrases here for you just to replace the text, but there really aren't that many. You'll want to add more, and doing so is easy! Just copy and paste a line and redo the text. Repeat as many times as you want with as many conversations as you want. You can always expand this section!
@@ -590,7 +592,7 @@ RandomTalk : nonoverlap
 
 firstchain
 {{CHAIN
-	"\0\s[0]Here is the second part of the chain.\w8\1\s[10]Will there be more?\e:chain=end"
+	"\0\s[0]Here is the second part of the chain.\w8\1%(ten)Will there be more?\e:chain=end"
 }}CHAIN
 
 //Pay careful attention to the CHAIN text and double brackets for these. Double brackets, CHAIN, dialogue, double brackets, CHAIN. If you are planning on making chains, I'd recommend just copying and pasting the chain example here and changing the dialogue and name of the function as you need. Less likely for mistakes to happen, you know?
@@ -598,12 +600,12 @@ firstchain
 
 secondchain
 {{CHAIN
-	"\0\s[0]This is the second piece of chained dialogue.\1\w8\s[10]This will lead to a third chain.\e:chain=thirdchain"
+	"\0\s[0]This is the second piece of chained dialogue.\1\w8%(ten)This will lead to a third chain.\e:chain=thirdchain"
 }}CHAIN
 
 thirdchain
 {{CHAIN
-	"\0\s[0]This is the third piece of chained dialogue.\1\w8\s[10]This is the end.\e:chain=end"
+	"\0\s[0]This is the third piece of chained dialogue.\1\w8%(ten)This is the end.\e:chain=end"
 }}CHAIN
 
 //As you can see, you can chain your chains together to make a very long-running conversation if you want! Just make sure to end the chain when you're done.
@@ -640,7 +642,7 @@ OnMinuteChange
  		elseif hour == 0 //If the hour is zero, aka midnight. Again, you can change this to whatever hour you want to check for.
 		{
  			"\0\s[0]It's midnight!\e"
- 			"\0\s[0]It's tomorrow now! \w4Technically, anyway. \w8\1\s[10]BooooOoooOOOooOOOOo.\e"
+ 			"\0\s[0]It's tomorrow now! \w4Technically, anyway. \w8\1%(ten)BooooOoooOOOooOOOOo.\e"
  			"\0\s[0]Oh, it's midnight. \w\s[8]When did that happen?\e"
 			//Then replace the dialogue with what's appropriate.
 		}
@@ -663,7 +665,7 @@ OnMinuteChange
 		}
 		elseif hour == 16 //if the hour is 16, or 4 pm. You can add in time checks for whatever times you want, or change what these time checks are looking for. These are just meant to be examples of how it works.
 		{
-			"\1\s[10]It's 4 pm.\e"
+			"\1%(ten)It's 4 pm.\e"
 			//Replace with what's appropriate.
 		}
 		else
@@ -714,7 +716,7 @@ OnSecondChange
  
 MikireTalk
  {
-	"\0\s[0]Ah, was I in your way?\w8\1\s[10]You can push Ctrl-Shift-F12 to bring them back."
+	"\0\s[0]Ah, was I in your way?\w8\1%(ten)You can push Ctrl-Shift-F12 to bring them back."
 	//Note the hotkey combo Triangle mentions. He's telling the truth, that should bring her back on the screen.
  }
 
@@ -740,15 +742,15 @@ OnSurfaceRestore
  {
  	//if reference0 == 4 || reference0 == 6 //This is checking what poses they are in. This looks to see if Girl is in pose 4 or pose 6, since she is reference0.
  	//{
- 	//"\1\s[10]You're in a sad pose.\w8\0\s[0]I'll go back to normal then.\e"
+ 	//"\1%(ten)You're in a sad pose.\w8\0\s[0]I'll go back to normal then.\e"
  	//}
  	//elseif reference1 == 14 || reference1 == 16 //This is doing the same but for Triangle, since he's reference1. It looks to see if he's in pose 14 or post 16.
  	//{
- 	//"\0\s[0]You look sad.\w8\1\s[10]I'll go back to normal.\e"
+ 	//"\0\s[0]You look sad.\w8\1%(ten)I'll go back to normal.\e"
  	//}
  	//else
  	//{
-	"\0\s[0]\1\s[10]\e"
+	"\0\s[0]\1%(ten)"
 	//}
  }
 

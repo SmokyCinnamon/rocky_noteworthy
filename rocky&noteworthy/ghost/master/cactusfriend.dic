@@ -1,0 +1,144 @@
+//...for our dear cactus friend.
+//Just fuctions anf stuff, might end up being long.
+
+//effect.dll?
+OnShake
+{
+	#include "effect.hpp"
+	
+	effect* screenshake;
+	
+	screenshake = impact(L Warble\Downloads\prividenie\ghost\rocky&noteworthy\ghost\master, "effect.dll");
+	"\1%(ten)Is it working?\e"
+}
+
+
+OnPancakehead
+{
+	if friendlylevel >= 200
+	{
+		friendlylevel += 6
+		"\1\s[15]Yes I do!\n/
+		\![*]\q[That's not good for you,pancakeoff]\n/
+		\![*]\q[You're a good pancake pal.,pcpal]%(rendmenu)\e"
+	}
+	elseif friendlylevel >= 70
+	{
+		friendlylevel += 3
+		"\1\s[15]Yup!\n/
+		\![*]\q[...Could you take them off please?,pancakeoff]\n/
+		\![*]\q[...Pancake pal?,pcpal]%(rendmenu)\e"
+	}
+	elseif friendlylevel >= 20
+	{
+		friendlylevel += 1
+		"\1\s[32]As one does.\n/
+		\![*]\q[Your fur will get all sticky.,pancakeoff]\n/
+		\![*]\q[Interesting.,pcpal]%(rendmenu)\e"
+	}
+	elseif friendlylevel <= 0
+	{
+		friendlylevel -= 3
+		"\1\s[34]Well, yes.\n/
+		\![*]\q[Take those off.,pancakeoff]\n/%(rendmenu)\e"
+	}
+	else
+		{
+		friendlylevel -= 1
+		"\1\s[31]Were you thinking I was unaware of my pancakes?\n/
+		\![*]\q[You look better without.,pancakeoff]\n/%(rendmenu)\e"
+	}
+}
+Select.pancakeoff
+{
+	friendlylevel -= 12
+	pancaketime = "off"
+	if friendlylevel >= 200
+	{
+		"\1\s[14]But I \f[italic,true]like\f[italic,false] being your pancake pal...%(rendmenu)\e"
+	}
+	elseif friendlylevel >= 70
+	{
+		"\1\s[14]Well, since you asked nicely...%(rendmenu)\e"
+	}
+	elseif friendlylevel >= 20
+	{
+		"\1\s[18]I suppose we wouldn't want that...%(rendmenu)\e"
+	}
+	elseif friendlylevel <= 0
+	{
+		"\1\s[31]Alright, alright!%(rendmenu)\e"
+	}
+	else
+	{
+		"\1\s[14]I suppose.%(rendmenu)\e"
+	}
+}
+
+Select.pcpal
+{
+	friendlylevel += 3
+	if friendlylevel >= 200
+	{
+		"\1\s[16]I do try my best.%(rendmenu)\e"
+	elseif friendlylevel >= 70
+	{
+		"\1\s[31]Pancake pals, perhaps.\w4\nIt may be so.%(rendmenu)\e"
+	}
+	else
+	{
+		"\1\s[18]I mean, if you \f[italic,true]don't\f[italic,false] want to be pancake pals...%(rendmenu)\e"
+	}
+}
+/*OnCactusMenu
+{
+	{
+		if friendlylevel >= 500
+		{
+			"\p3\s[50]\b[2]"
+			--
+			"\f[italic,true](This cactus... this cactus is your best friend.)\f[italic,false]"
+			"\f[italic,true](You love this cactus.)\f[italic,false]"
+			"\f[italic,true](This cactus will never leave you.\nNever.)\f[italic,false]"
+			"\f[italic,true](A hueargh of affection is heard.)\f[italic,false]"
+			"\f[italic,true](Your one true friend in this cold, hard world.)\f[italic,false]"
+			"\f[italic,true](Loved despite the spines, you feel as though it returns you affections.)\f[italic,false]"
+			"\f[italic,true](Your best friend.)\f[italic,false]"
+			--
+			"\n\n[half]/
+				\![*]\q[Ask about...,cactask]\n/
+				\![*]\q[Nothing,donecactus]\n\n\e"
+		}
+		else
+		{
+			\p3\s[50]\b[2]"
+			--
+			"\f[italic,true](It stares.)\f[italic,false]"
+			"\f[italic,true](You'd prefer just the terracotta, thanks.)\f[italic,false]"
+			"Hueargh."
+			--
+			"\n\n[half]/
+				\![*]\q[Ask about...,cactask]\n/
+				\![*]\q[Nothing,donecactus]\n\n\e"
+		}
+	}
+}
+
+Select.donecactus
+{
+	"\p3\s[50]Hueargh\e"
+}
+
+Select.cactask
+{
+	{
+		if friendlylevel >= 500
+		{
+			"(You ask if it would like a different ribbon. There is no reply.)\e"
+		}
+		else
+		{
+			"(There's nothing to ask about, really.)\n(It's a cactus.)\n(What did you expect?)\e"
+		}
+	}
+}*/
