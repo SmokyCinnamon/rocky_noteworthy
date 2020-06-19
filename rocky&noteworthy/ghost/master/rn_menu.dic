@@ -180,8 +180,18 @@ Select.familytalk
 
 Select.stimmybean
 {
-	"\s[8]What about it? \w4Was I being weird in my explanation? \w4I'm sorry.%(askmore)\e"
-	"\s[8]What about it? \w4\s[9]If you're trying to tell me to stop, \w4that's a hard no.%(askmore)\e"
+	if friendlylevel >= 200
+	{
+		//figure these out later! ;P
+		//shutdownmention = 1
+		//stimexplain = 1
+		"\s[8]It's kinda like... \w4\s[0]if I'm happy, \w4for example, all this energy gets built up, \w4and stimming is my way of releasing it?\w4 I don't know if that makes a whole lotta sense. \w4\s[8]It's not always when I'm happy though. \w4If I'm getting close to a shutdown, \w4stimming helps there too, \w3\s[9]although getting out of uncomfortable situations is also helpful. \w4\s[0]That's the best wording I got right now. \w4Did that answer your question?%(askmore)\e"
+	}
+	else
+	{
+		"\s[8]What about it? \w4Was I being weird in my explanation? \w4I'm sorry.%(askmore)\e"
+		"\s[8]What about it? \w4\s[9]If you're trying to tell me to stop, \w4that's a hard no.%(askmore)\e"
+	}
 }
 Select.stimexpo
 {
@@ -235,20 +245,17 @@ Select.smellslikepancake
 }
 Select.nothanks
 {
-	friendlylevel +=2
 	"\s[0]No thank you. I don't like coffee.%(itemend)\e"
 }
 Select.givebook
 {
 	friendlylevel +=3
 	"%(bookthem)\e"
-	"%(bookher)\e"
 }
 Select.giveplush
 {
 	friendlylevel +=5
 	"%(theirplushnow)\e"
-	"%(herplushnow)\e"
 }
 Select.BACKTOMENU
 	{
@@ -404,8 +411,7 @@ OnUserBornMonth
 			}
 		else //if the month isn't a valid month, like 32 or something.
 			{
-			"\0\s[0]That's not a valid month. Try again.\![open,inputbox,OnUserBornMonth,-1]\e"
-			"\0\s[9]That month isn't valid, silly. Try again.\![open,inputbox,OnUserBornMonth,-1]\e"
+			"\0\s[9]That's not a real month. Try again.\![open,inputbox,OnUserBornMonth,-1]\e"
 			
 			//You can replace this dialogue as well up to the \! tag, as mentioned. You need to leave the tag for the input box so they can put in a correct month.
 			}
@@ -507,7 +513,7 @@ OnUserBornDay
 				}
 			else //if the day isn't valid, like the 10046th or something.
 				{
-					"\0\s[9]That's not a valid day. Try again.\![open,inputbox,OnUserBornDay,-1]\e"
+					"\0\s[9]That's not a real day. Try again.\![open,inputbox,OnUserBornDay,-1]\e"
 					
 					//Similar as you can see to the month check above. You can replace the dialogue here up to the tag as you just did, but make sure to leave the input box tag so the user can put in a correct day.
 				}
@@ -526,7 +532,7 @@ OnUserBornDay
 				}
 			else
 				{
-					"\0\s[0]That's not a valid day. Try again.\![open,inputbox,OnUserBornDay,-1]\e"
+					"\0\s[9]That's not a real day. Try again.\![open,inputbox,OnUserBornDay,-1]\e"
 					
 					//And the same as above again! You see the pattern here?
 				}
@@ -544,7 +550,7 @@ OnUserBornDay
 				}
 			else
 				{
-					"\0\s[0]That's not a valid day. Try again.\![open,inputbox,OnUserBornDay,-1]\e"
+					"\0\s[9]That's not a real day. Try again.\![open,inputbox,OnUserBornDay,-1]\e"
 				}
 		}		
 }
