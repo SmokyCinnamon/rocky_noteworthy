@@ -1,18 +1,20 @@
 Charset,UTF-8
 __system_settings_version__,2
-inputbox.left,642
+balloon,C:\Users\L Warble\Downloads\prividenie\balloon\nidus_vista\
 Char1.balloon.isleft,1
-balloon0.offset,158.-326
-scriptbox.left,665
-Char0.centery,738
-balloon1.offset,74.-112
+balloon0.offset,113.-186
+scriptbox.left,214
+balloon3.offset,32.-56
+Char0.centery,658
+balloon1.offset,347.51
 Char0.balloon.isleft,1
-Char.VirtualDesktop,3704d5a3-ac03-419b-aa38-b4a6de52b797
-Char0.center,1265
-scriptbox.top,524
-Char1.centery,737
-Char1.center,1091
-seriko.scaling.percent.x,100
-seriko.scaling.percent.y,100
-inputbox.top,338
+Char3.center,203
+Char3.balloon.isleft,0
+Char.VirtualDesktop,f25a5628-43a6-4df4-be44-e64acb92eb2a
+Char0.center,1252
+scriptbox.top,492
+Char1.centery,627
+Char3.centery,311
+Char1.center,968
+char1.bind.savearray,51=0 52=1
 __system_written_flag_do_not_remove__,written

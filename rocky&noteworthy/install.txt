@@ -10,4 +10,4 @@ directory,rocky&noteworthy
 
 //This tells the program what balloon your ghost will be using. Replace "z_simple" and point it at your balloon directory if you've made one, or use a default balloon directory.
 
-balloon.directory,z_simple
+//balloon.directory,z_simple
