@@ -93,7 +93,7 @@ OnInstallComplete
  	}
 	elseif reference0 == "ghost" //if the type of the file they're installing is a ghost.
  	{
-		"\s[0]It's another ghost!\w8\1%(ten)They're called %(reference1)!\e"
+		"\s[0]It's another ghost!\w8\1%(ten)It's called %(reference1).\e"
 		//Reference1 here would be the name of the ghost. Replace as needed.
  	}
 	elseif reference0 == "balloon" //if the type of file is a balloon
@@ -279,7 +279,7 @@ OnUpdateBegin
  {
 	"\0\s[0]Oh an update?\w8\e"
 	
-	"\1%(ten)An update? This sounds fun.\w8\0\s[8]Hope you read the directions properly.\w8\e"
+	"\1%(ten)An update? This sounds fun.\w8\0\s[8]I wonder what's new?\w8\e"
  }
 
  //---- OnUpdateReady ---------------------------------------------------------

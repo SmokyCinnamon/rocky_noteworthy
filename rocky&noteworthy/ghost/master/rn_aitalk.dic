@@ -686,7 +686,7 @@ OnMinuteChange
 
 OnSecondChange
  {
-	if passsec == 60
+	if passsec == 59
  		{
 	 	passsec = 0
  		passmin = passmin + 1
@@ -716,7 +716,7 @@ OnSecondChange
  
 MikireTalk
  {
-	"\0\s[0]Ah, was I in your way?\w8\1%(ten)You can push Ctrl-Shift-F12 to bring them back."
+	"\0\s[0]Ah, was I in your way?\w8\1%(ten)You can push Ctrl-Shift-F12 to bring %(nobj) back."
 	//Note the hotkey combo Triangle mentions. He's telling the truth, that should bring her back on the screen.
  }
 

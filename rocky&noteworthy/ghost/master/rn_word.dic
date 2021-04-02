@@ -74,37 +74,48 @@ askmore
 {
 	"\n\n[half]\![*]\q[Ask something else,questionmenu]%(nendmenu)"
 }
+//Hhhhhhhh okay let's get this over with
+//Noteworthy's fucking pronouns! Is there a better way to do this? Proba-fucking-ly! Do I know it? No!!
+nsubj
+{
+	"she"
+	"they"
+}
+nobj
+{
+	"her"
+	"them"
+}
+nposdet
+{
+	"her"
+	"their"
+}
+npospro
+{
+	"hers"
+	"theirs"
+}
+nreflex
+{
+	"herself"
+	"themself"
+}
 bookthem
 {
-	"\s[0](You give them a physics book.)\n\s[8]While I appreciate the gesture, \w4I'm not really much of a physics person. \w4\s[0]I am, \w4however, \w4related to people who are!%(itemend)"
-	"\s[0](You give them a book about human skeletal structure.)\n\s[6]Ooh, \w4neat! \w4\s[0]I've always been a bit of an anatomy nut, \w4so it's interesting to learn about the differences between monster and human skeletons.%(itemend)"
-	"\s[0](You give them a book about a cat who escapes his owners and joins a group of feral forest cats who don't get along with the other three groups of feral cats who also live there.)\n\s[5]Thank you very much! This looks interesting.%(itemend)"
-	"\s[0](You give them a book about a young dragon involved in a prophecy who escapes the cave he and his friends have been living in to go on an adventure in the outside world.)\n\s[6]Cool, \w4dragons!%(itemend)"
-	"\s[0](You give them a book about two kids with the same birthday who get stuck in a time loop.)\nOh, \w4this looks interesting. \w4Thank you, %(username)!%(itemend)"
-	"\s[0](You give them a book about space.)\n\s[6]Neat, \w4thanks!%(itemend)"
-}
-bookher
-{
-	"\s[0](You give her a physics book.)\n\s[8]While I appreciate the gesture, \w4I'm not really much of a physics person. \w4\s[0]I am, \w4however, \w4related to people who are!%(itemend)"
-	"\s[0](You give her a book about human skeletal structure.)\n\s[6]Ooh, \w4neat! \w4\s[0]I've always been a bit of an anatomy nut, \w4so it's interesting to learn about the differences between monster and human skeletons.%(itemend)"
-	"\s[0](You give her a book about a cat who escapes his owners and joins a group of feral forest cats who don't get along with the other three groups of feral cats who also live there.)\n\s[5]Thank you very much! This looks interesting.%(itemend)"
-	"\s[0](You give her a book about a young dragon involved in a prophecy who escapes the cave he and his friends have been living in to go on an adventure in the outside world.)\n\s[6]Cool, \w4dragons!%(itemend)"
-	"\s[0](You give her a book about two kids with the same birthday who get stuck in a time loop.)\nOh, \w4this looks interesting. \w4Thank you, %(username)!%(itemend)"
-	"\s[0](You give her a book about space.)\n\s[6]Neat, \w4thanks!%(itemend)"
+	"\s[0](You give %(nobj) a physics book.)\n\s[8]While I appreciate the gesture, \w4I'm not really much of a physics person. \w4\s[0]I am, \w4however, \w4related to people who are!%(itemend)"
+	"\s[0](You give %(nobj) a book about human skeletal structure.)\n\s[6]Ooh, \w4neat! \w4\s[0]I've always been a bit of an anatomy nut, \w4so it's interesting to learn about the differences between monster and human skeletons.%(itemend)"
+	"\s[0](You give %(nobj) a book about a cat who escapes his owners and joins a group of feral forest cats who don't get along with the other three groups of feral cats who also live there.)\n\s[5]Thank you very much! This looks interesting.%(itemend)"
+	"\s[0](You give %(nobj) a book about a young dragon involved in a prophecy who escapes the cave he and his friends have been living in to go on an adventure in the outside world.)\n\s[6]Cool, \w4dragons!%(itemend)"
+	"\s[0](You give %(nobj) a book about two kids with the same birthday who get stuck in a time loop.)\nOh, \w4this looks interesting. \w4Thank you, %(username)!%(itemend)"
+	"\s[0](You give %(nobj) a book about space.)\n\s[6]Neat, \w4thanks!%(itemend)"
 }
 theirplushnow
 {
-	"\s[0](You give them a cat plushie.)\n\s[6]Thanks %(username)!%(itemend)"
-	"\s[0](You give them a fish plushie.)\n\s[6]Thank you!%(itemend)"
-	"\s[0](You give them a bird plushie.)\n\s[6]Thanks!%(itemend)"
-	"\s[0](You give them a dragon plushie.)\n\s[6]Aw, thank you!%(itemend)"
-}
-herplushnow
-{
-	"\s[0](You give her a cat plushie.)\n\s[6]Thanks %(username)!%(itemend)"
-	"\s[0](You give her a fish plushie.)\n\s[6]Thank you!%(itemend)"
-	"\s[0](You give her a bird plushie.)\n\s[6]Thanks!%(itemend)"
-	"\s[0](You give her a dragon plushie.)\n\s[6]Aw, thank you!%(itemend)"
+	"\s[0](You give %(nobj) a cat plushie.)\n\s[6]Thanks %(username)!%(itemend)"
+	"\s[0](You give %(nobj) a fish plushie.)\n\s[6]Thank you!%(itemend)"
+	"\s[0](You give %(nobj) a bird plushie.)\n\s[6]Thanks!%(itemend)"
+	"\s[0](You give %(nobj) a dragon plushie.)\n\s[6]Aw, thank you!%(itemend)"
 }
 itemend
 {
